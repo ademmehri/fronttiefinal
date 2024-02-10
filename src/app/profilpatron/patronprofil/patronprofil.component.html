@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="con">
+    <div class="con">
+        <div class="pp1">
+            <div>
+                <div class="titre">
+                    <h1>
+                        Détails <span class="sp1">personnel</span> </h1>
+                            </div>
+                            <div class="donee">
+                                <p>Ajoutez votre <span class="sp2">photo</span>  et vos <span class="sp2">informations personnelles</span>  pour augmenter votre visibilité lorsque les employeurs recherchent des CV.</p>
+                            </div>
+                    
+            </div>
+                </div>
+  <div class="p">
+    <div class="profil">
+        <div class="head">
+            <div class="image">
+                <img [src]="url" alt="">
+                <div class="icon">
+                    <a href="/updatepatron/{{emp.id}}"><i class='bx bx-pencil pen'></i></a>
+                    <a href="/pagepatron/{{emp.id}}"><i class='bx bx-search-alt-2 pen'></i></a>
+                    <button (click)="logout()" class="c">  <i class='bx bx-exit pen'></i></button>
+                </div>
+            </div>
+            <div class="nom">
+                <p>{{emp.nom}}</p>
+            </div>
+        </div>
+        <div class="info">
+            <div class="p1">
+                <div class="input">
+                    <label for="#">Numéro de téléphone</label>
+                    <p>{{emp.num}}</p>
+                </div>
+                <div class="input">
+                    <label for="#">Email</label>
+                    <p>{{emp.mail}}</p>
+                </div>
+            </div>
+          
+          
+            </div>
+    
+        </div>
+  </div>
+ 
+
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,438 @@
+section{
+    width: 100%;
+    height: 100vh;
+}
+.titre{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+   
+}
+.titre p{
+font-size: 4rem;
+color: #3a6cf4;
+font-weight: 600;
+}
+.cadre{
+    border: #e3e3e3 0.5px groove ;
+
+}
+.card{
+    background-color: #fff;
+    width: 16em;
+   min-height: 15em;
+   height: auto;
+    box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+    border-radius: 10px;
+    margin: 50px;
+    transition: 0.7s ease;
+   
+   
+}
+
+.dur{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dur p{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+}
+.prix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prix p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000;
+}
+.prix p span{
+    font-weight: 600;
+    color: #3a6cf4;
+    font-size: 2rem;
+}
+.prix p .s{
+    font-size: 1rem;
+    color: #000;
+}
+.prix p .m{
+    font-size: 1rem;
+    color: red;
+}
+
+.btn{
+   border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.btn button{
+    background-color: #3a6cf4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    transition: .5s;
+}
+.btn button a{
+color: #fff;
+text-decoration: none;
+}
+.btn button:hover{
+   
+    background-color: #4d84e2 ;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.packs{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.s{
+    color: red;
+}
+@media screen and (max-width:767px)  {
+    section{
+        width: 100%;
+        height: 100%;
+    }
+    .titre{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding-left: 10px;
+        margin-left: 10px;
+       
+    }
+    .titre p{
+    font-size: 2rem;
+    color: #3a6cf4;
+    font-weight: 600;
+    }
+    .cadre{
+        border: #e3e3e3 0.5px groove ;
+    
+    }
+    .card{
+        background-color: #fff;
+        width: 10em;
+       min-height: 9em;
+       height: auto;
+        box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+        border-radius: 10px;
+        margin: 50px;
+        transition: 0.7s ease;
+       
+       
+    }
+    
+    .dur{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dur p{
+        font-size: 2rem;
+        font-weight: 600;
+        color: #000;
+    }
+    .prix{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .prix p{
+        font-size: 1rem;
+        font-weight: 300;
+        color: #000;
+    }
+    .prix p span{
+        font-weight: 600;
+        color: #3a6cf4;
+        font-size: 1rem;
+    }
+    .prix p .s{
+        font-size: 1rem;
+        color: #000;
+    }
+    .prix p .m{
+        font-size: 1rem;
+        color: red;
+    }
+    
+    .btn{
+       border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+    .btn button{
+        background-color: #3a6cf4;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        transition: .5s;
+        font-size: 10px;
+    }
+    .btn button a{
+    color: #fff;
+    text-decoration: none;
+    }
+    .btn button:hover{
+       
+        background-color: #4d84e2 ;
+        
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+    .packs{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .s{
+        color: red;
+    }
+    .c{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+}
+@media screen and (min-width:766px) and (max-width:900px) {
+    .c{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section{
+        width: 100%;
+        height: 100vh;
+    }
+    .titre{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+       
+    }
+    .titre p{
+    font-size: 2rem;
+    color: #3a6cf4;
+    font-weight: 600;
+    }
+    .cadre{
+        border: #e3e3e3 0.5px groove ;
+    
+    }
+    .card{
+        background-color: #fff;
+        width: 15em;
+       min-height: 14em;
+       height: auto;
+        box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+        border-radius: 10px;
+        margin: 50px;
+        transition: 0.7s ease;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+    }
+    
+    .dur{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dur p{
+        font-size: 2rem;
+        font-weight: 600;
+        color: #000;
+    }
+    .prix{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .prix p{
+        font-size: 3rem;
+        font-weight: 300;
+        color: #000;
+    }
+    .prix p span{
+        font-weight: 600;
+        color: #3a6cf4;
+        font-size: 2rem;
+    }
+    .prix p .s{
+        font-size: 1rem;
+        color: #000;
+    }
+    .prix p .m{
+        font-size: 1rem;
+        color: red;
+    }
+    
+    .btn{
+       border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+    .btn button{
+        background-color: #3a6cf4;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        transition: .5s;
+       
+    }
+    .btn button a{
+    color: #fff;
+    text-decoration: none;
+    }
+    .btn button:hover{
+       
+        background-color: #4d84e2 ;
+        
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+    .packs{
+        display: grid;
+       grid-template-columns: 300px 300px;
+      
+    }
+    .s{
+        color: red;
+    }
+   
+}
+@media screen and (min-width:901px) and (max-width:1100px) {
+    section{
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+    }
+    .titre{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+       
+    }
+    .titre p{
+    font-size: 2rem;
+    color: #3a6cf4;
+    font-weight: 600;
+    }
+    .cadre{
+        border: #e3e3e3 0.5px groove ;
+    
+    }
+    .card{
+        background-color: #fff;
+        width: 15em;
+       min-height: 14em;
+       height: auto;
+        box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+        border-radius: 10px;
+        margin: 50px;
+        transition: 0.7s ease;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+    }
+    
+    .dur{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dur p{
+        font-size: 2rem;
+        font-weight: 600;
+        color: #000;
+    }
+    .prix{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .prix p{
+        font-size: 3rem;
+        font-weight: 300;
+        color: #000;
+    }
+    .prix p span{
+        font-weight: 600;
+        color: #3a6cf4;
+        font-size: 2rem;
+    }
+    .prix p .s{
+        font-size: 1rem;
+        color: #000;
+    }
+    .prix p .m{
+        font-size: 1rem;
+        color: red;
+    }
+    
+    .btn{
+       border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+    .btn button{
+        background-color: #3a6cf4;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        transition: .5s;
+       
+    }
+    .btn button a{
+    color: #fff;
+    text-decoration: none;
+    }
+    .btn button:hover{
+       
+        background-color: #4d84e2 ;
+        
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+    .packs{
+        display: grid;
+       grid-template-columns: 300px 300px;
+      
+    }
+    .s{
+        color: red;
+    }
+   
+}
+

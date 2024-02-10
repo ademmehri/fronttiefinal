@@ -1,0 +1,84 @@
+<app-header></app-header>
+<section class="pcv">
+    <div class="pp1">
+        <div>
+            <div class="titre">
+                <h1>
+                    Détails <span class="sp1">Employé</span> </h1>
+                        </div>
+                     
+                
+        </div>
+            </div>
+ <div class="cvv" >
+    
+    <div class="right">
+        <div class="head">
+            <div class="image">
+                <div class="circle">
+                    <img src="assets/adem.jpg" alt="">
+                    </div>
+
+            </div>
+            <div class="nom">
+<p class="titre1">Adem Mehri</p>
+<div class="cv" >
+    <a href="assets/{{this.cv.titlefile}}" >Voir C.V</a>
+ </div>
+            </div>
+           
+        </div>
+        <div class="body">
+            <div class="exp">
+           <div class="contact">
+            <p class="titre2">Contact</p>
+            <div class="re">
+           <div class="inputfield">
+            <i class='bx bxs-envelope'></i>
+<p>
+ mehriadem309@gmail.com
+</p>
+           </div>
+      
+                        </div>
+           <div class="inputfield">
+            <i class='bx bxs-phone'></i>
+<p>
+24480550
+</p>
+           </div>
+
+           </div>
+           <div class="experience">
+            <p class="titre2">
+                Experience
+            </p>
+            <p>
+         5 ans experience
+                </p>
+             
+      
+           </div>
+            </div>
+
+        </div>
+        <form [formGroup]="formsignin">
+            <div class="ajout">
+          
+                <p class="titre2">Ajoutez une offre</p>
+                <textarea name="" id="" cols="30" rows="3" formControlName="offre"></textarea>
+            </div>
+            <p class="error">{{result1}}</p>
+            <div class="b">
+               <input class="btn" type="button" value="envoyer" (click)="onsubmit()" >
+                        </div>
+                
+        </form>
+    
+
+
+    </div>
+
+ </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<section>
+ <div class="pp1">
+  <div class="p1">
+    <div class="img">
+      <img src="assets/log.png" alt="">
+    </div>
+   <div class="t">
+    <h2>Inscription</h2>
+   </div>
+   <div class="g">  <div class="bar"></div></div>
+<div class="med">
+  <form [formGroup]="formsignin">
+  
+   <div class="input" >
+     <p>Nom & Prénom</p>
+     <div class="i d" [style]="bnom">
+       <i class='bx bx-user'></i>
+       <input type="text" placeholder="Nom & prenom" formControlName="nom">
+     </div>
+   </div>
+   <p class="err">{{nom}}</p>
+   
+    <div class="input" >
+     <p>Adresse email</p>
+     <div class="i d" [style]="bemail">
+       <i class='bx bx-envelope'></i>
+       <input type="text" placeholder="Entrer email" formControlName="email">
+     </div>
+   </div>
+   <p class="err">{{email}}</p>
+<div class="input" >
+  <p for="#">Numero</p>
+<div class="i d" [style]="bnumero">
+  <i class='bx bxs-phone'></i>
+  <input placeholder="Numero" type="text" formControlName="numero" >
+</div>
+</div>
+<p class="err">{{numero}}</p>
+<div class="input" >
+  <p for="#">Mot de passe</p>
+<div class="i d" [style]="bpassword">
+  <i class='bx bx-lock-alt'></i>
+  <input placeholder="mot de passe" type="password" formControlName="password" >
+</div>
+</div>
+<p class="err">{{password}}</p>
+   <div class="text">
+     <p>A déja un compte?</p><a href="login">Connexion</a>
+   </div>
+ <div class="b">
+   <div class="bt">
+     <a (click)="onsubmit()">S'inscrire</a>
+   </div>
+ </div>
+ 
+     </form>
+</div>
+  </div>
+ </div>
+    <div class="p2">
+ <img src="assets/S.png" alt="">
+    </div>
+
+</section>

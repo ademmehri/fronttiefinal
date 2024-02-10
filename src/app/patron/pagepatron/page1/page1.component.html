@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<app-header></app-header>
+<body>
+<div class="b">
+<div>
+ <div class="titre">
+  <h2>Recherche <span>Stagiaire</span></h2>
+ </div>
+  <div class="navbar">
+   <div>
+    <form [formGroup]="formsignin">
+      <ul>
+         
+        <li>
+          <div>
+            <i class='bx bxs-graduation'></i>
+            <select  class="select" (change)="onselect($event)">
+              <option value="1">Choisir votre Spécilalité</option>
+              <option value="cuisiner">Cuisinier</option>
+              <option value="serveur">Serveur</option>
+            </select>
+          </div>
+     
+      
+        </li>
+         <div class="ba"></div>
+        <li>
+          <div>
+            <i class='bx bx-map-pin'></i>
+            <select  class="select" (change)="onselectreg($event)">
+              <option value="1">choisir votre Gouvernerat</option>
+              <option value="ariana">Ariana</option>
+              <option value="sidibouzid">sidibouzid</option>
+            </select>
+          </div>
+    
+        </li>
+        <div class="ba"></div>
+        <li>
+          <div>
+            <i class='bx bx-user-circle'></i>
+            <select  class="select" (change)="onselectsexe($event)">
+              <option value="1">Choisir votre Sexe</option>
+              <option value="Homme">Homme</option>
+              <option value="Femme">Femme</option>
+              <option value="tous">tous</option>
+            </select>
+          </div>
+          </li>
+
+          <li>
+            <div class="bt"><a href="">Rechercher</a></div>
+          </li>
+    
+      </ul>
+    
+    </form>
+   </div>
+      </div>
+</div>
+      
+</div>
+ 
+</body>
+<div class="e">
+  <p class="eror">{{resultat}}</p>
+</div>
+<section>
+  
+  <div class="employee">
+
+  <button (click)="consulter(emp.id)" *ngFor="let emp of emps">
+      
+    <div class="card">
+      <div class="ico">
+       <div>
+          <img src="assets\{{emp.filee.titlefile}}" alt="">
+       </div>
+  
+      </div>
+      <div class="info">
+        <p class="nom">{{emp.nom}}</p>
+          <p class="num">{{emp.num}}</p>
+          <p class="num">{{emp.city}}</p>
+      </div>
+    </div>
+  </button>
+  <button >
+      
+    <div class="card">
+      <div class="ico">
+       <div>
+          <img src="assets\adem.jpg" alt="">
+       </div>
+  
+      </div>
+      <div class="info">
+      <div class="d">
+   <div class="d2">
+    <p class="nom">Adem mehri</p>
+    <p class="sp">tunis</p>
+   </div>
+      </div>
+          <p class="num">24480550</p>
+       
+      </div>
+    </div>
+  </button>
+  
+  
+  
+ 
+
+  </div>
+</section>
+<app-footer></app-footer>
+

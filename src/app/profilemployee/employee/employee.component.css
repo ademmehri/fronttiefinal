@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+.con{
+    width: 99.5%;
+    height: 100%;
+margin-left: 5px;
+margin-right: 5px;
+    font-family: 'Poppins', sans-serif;
+
+    padding-right: 5px;
+   
+  
+}
+.pp1{
+    background-color: #F8F8FE;
+    height: 175px;
+   clip-path: polygon(100% 0, 93% 100%, 100% 100%, 0% 100%, 0% 0%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.sp1{
+    color: #2772D6;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.donee{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.donne p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+
+}
+.sp2{
+    font-weight: 700;
+}
+.icon{
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.icon i{
+    padding: 10px;
+    font-size: 1.3em;
+
+}
+.pen{
+    color: #000;
+}
+
+
+.profil{
+    width: 688px;
+   min-height: 100vh;
+   height: auto;
+  margin: 10px;
+  background-color: #FBFBFB;
+padding: 20px;
+border-radius: 87px;
+
+  box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+}
+.p{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.image{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.image img{
+   height: 150px; 
+width: 150px;
+border-radius: 50%;
+}
+.nom p{
+    font-weight: bold;
+    font-size: 2em;
+    color: #3a6cf4;
+    padding: 10px;
+}
+.info{
+    padding: 10px;
+}
+.input label{
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 19px;
+}
+.input p{
+ padding-left: 10px;
+    font-weight: 300;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+.s{
+    color: #2772D6;
+}
+table{
+    padding: 10px;
+    width: 80%;
+}
+.t{
+padding: 5px;
+    font-weight: 600;
+
+}
+.offre{
+    min-height:  300px;
+    height: auto;
+    width: 100%;
+   
+   
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+ 
+}
+.p3{
+margin-top: 30px;
+}
+
+.cadre{
+    width: 460px;
+    height: 86px;
+    border-radius: 16px;
+    background-color: #EDEDED;
+    padding: 10px;
+}
+.cadre i{
+    font-size: 23px;
+    padding-right: 5px;
+}
+.cadre img{
+    width: 36px;
+    height: 35px;
+  margin-right: 10px;
+}
+.cadre p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.a{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.nom{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+.d{
+    display: flex;
+ 
+ 
+}
+.text{
+    position: absolute;
+    top: 40%;
+    background-color: #3a6cf4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition:opacity 0.5s ease;
+
+}
+.text::before{
+    content: "";
+    position: absolute;
+    border: 15px solid;
+    border-color: #3a6cf4 #0000 #0000 #0000;
+ top: 100%;
+}
+.c:hover .text{
+    top: -50%;
+    visibility: visible;
+    opacity: 1;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin: 5px;
+ border: none;
+}
+.btn button{
+    color: #fff;
+    padding: 5px;
+    border: none;
+    background-color: #3a6cf4;
+    transition: .5s;
+}
+.btn button:hover{
+    background-color: #4d84e2;  
+}
+.b{
+    text-decoration: none;
+    border: none;
+}
+.c{
+    border: none;
+ background: none;
+ display: inline-block;
+ justify-content: center;
+ align-items: center;
+}
+@media screen and (max-width:680px) {
+   .profil{
+    width: 100%;
+   }
+   .cadre{
+    width: 330px;
+   }
+   h1{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.sp1{
+    font-size: 30px;
+}
+.donne{
+    padding-left: 10px;
+}
+p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+
+}
+.sp2{
+    font-size: 15px;
+}
+
+    
+}
+@media screen and (min-width:679px) and (max-width:920px) {
+   .profil{
+    height: 100%;
+   }
+    
+}

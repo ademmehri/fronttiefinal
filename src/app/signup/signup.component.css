@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+input:focus{
+    outline: none;
+}
+.err{
+    color: red;
+    font-size: 15px;
+}
+a{
+    cursor: pointer;
+}
+.region label{
+    color: #000;
+    font-weight: 500;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.pp1{
+    width: 50%;
+    padding-top: 50px;
+    display: flex;
+
+    justify-content: center;
+    
+}
+.g{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.bar{
+
+width: 50px;
+height: 4px;
+
+background-color:  #2772D6;
+}
+.img{
+ width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img img{
+    width: 190px;
+    height: 90px;
+}
+.p2{
+    width: 40%;
+    height: 100%;
+}
+.p2 img{
+    width: 100%;
+    height: 100%;
+}
+.t{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.t h2{
+    font-weight: 700;
+    font-size: 30px;
+padding-top: 40px;
+    line-height: 36px;
+ letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+}
+.f1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input{
+    margin-top: 20px;
+}
+.input p{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+form{
+    padding-top: 10px;
+}
+.i{
+    background-color: #F0EDFF;
+    width: 207px;
+    height: 42px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 10px;
+
+}
+.i i{
+    padding-right: 10px;
+    font-size: 18px;
+}
+.i input{
+    border: none;
+    background: none;
+width: 90%;
+font-family: 'Poppins', sans-serif;
+}
+.d{
+    width: 433px;
+    height: 42px;
+}
+.d select{
+    width: 90%;
+    background: none;
+    border: none;
+}
+
+.text{
+    display: flex;
+justify-content: center;
+margin-top: 5px;
+}
+.text p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.text a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+.bt{
+    width: 157px;
+    height: 53px;
+    border-radius: 20px;
+    background-color: #2772D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bt a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+    text-decoration: none;
+}
+.b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+/* Media Query pour les écrans d'une largeur maximale de 768 pixels */
+@media screen and (max-width: 768px) {
+   .med{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+    .i {
+        width:250px;
+      }
+    .f1{
+        display: block;
+        
+    }
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .p1 {
+      width: 80%;
+    }
+    .pp1{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .p2 {
+      display: none;
+    }
+  
+    .t h2 {
+      font-size: 24px;
+      padding-top: 20px;
+    }
+    .img{
+        margin-top: 30px;
+    }
+  }
+  
+  /* Media Query pour les écrans d'une largeur comprise entre 769 et 1024 pixels */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .med{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+        .i {
+            width:500px;
+          }
+        .f1{
+            display: block;
+            
+        }
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .p1 {
+          width: 100%;
+        }
+        .pp1{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+      
+        .p2 {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+      
+        .t h2 {
+          font-size: 24px;
+          padding-top: 0px;
+        }
+        .img{
+            margin-top: 100px;
+        }
+  }
+  
+  /* Media Query pour les écrans d'une largeur supérieure à 1024 pixels */
+  @media screen and (min-width: 1025px) {
+    .pp1 {
+      width: 50%;
+    }
+  
+    .p2 {
+      width: 40%;
+    }
+  
+    .t h2 {
+      font-size: 30px;
+      padding-top: 40px;
+    }
+  
+    .i {
+      width: 207px;
+    }
+  
+    .d {
+      width: 433px;
+    }
+  
+    .bt {
+      width: 157px;
+      height: 53px;
+    }
+  }

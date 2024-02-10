@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<section>
+<div class="form">
+  <div class="donnee">
+    <form [formGroup]="formsignin"  class="form">
+      <div class="titre">
+        <img src="assets\log.png" alt="hello">
+      </div>
+      <div class="text">
+        <h2>Connexion</h2>
+      </div>
+      <div class="g">  <div class="bar"></div></div>
+   <div class="p1">
+  <div>
+    <div class="email">
+      <label for="#">Email</label>
+      <div class="cont d">
+        <i class='bx bx-envelope'></i>
+        <input [style]="bgcol" type="text" placeholder="Email" formControlName="email">
+      </div>
+     
+    </div>
+  
+    <div class="email">
+  <div>
+        <label for="#">Mot de passe</label>
+  </div>
+      <div class="cont d">
+        <i class='bx bx-lock-alt'></i>
+        <input [style]="bgcol2" type="password" placeholder="+6 caractere" formControlName="mp">
+      </div>
+     
+    </div>
+  
+  <div class="a">
+  <a  (click)="motpasseoubliee()">mot passe oublié ?</a>
+  </div>
+  <div class="b">
+    <div class="bt">
+      <a (click)="onsubmit()" >S'inscrire</a>
+    </div>
+    </div>
+    <div class="text">
+      <p>N'avez pas un compte ?</p> <a href="">S'inscrire</a>
+    </div>
+  </div>
+   </div>
+
+    </form>
+</div>
+</div>
+
+<div class="image">
+  <img class="im" src="assets/login.png" alt="">
+</div>
+</section>

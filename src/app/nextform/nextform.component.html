@@ -1,0 +1,148 @@
+<app-header></app-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<section>
+    <div class="p1">
+<div>
+    <div class="titre">
+        <h1>
+            Détails <span class="sp1">personnel</span> </h1>
+                </div>
+                <div class="donee">
+                    <p>Ajoutez votre <span class="sp2">photo</span>  et vos <span class="sp2">informations personnelles</span>  pour augmenter votre visibilité lorsque les employeurs recherchent des CV.</p>
+                </div>
+        
+</div>
+    </div>
+    <div class="p2">
+
+    <div class="form">
+       <div>
+        <div class="head">
+       
+            <div class="circle">
+                
+                <img [src]="url"  alt="">
+                
+                </div>
+              
+           <div class="upload">
+            <p class="nom">{{empl.nom}}</p>
+            <p class="mail">{{empl.mail}}</p>
+            <input name="file" id="file" class="inputfile"  type="file" (change)="onselectfile($event)"/>
+            <label for="file"><i class='bx bx-upload'></i> Choisie une image</label>
+           </div>
+        </div>
+        <p class="m">{{timg}}</p>
+        <body>
+            <form [formGroup]="formsignin">
+            <div class="region">
+                <label for="#">Date de Naisance</label>
+             <div class="cont" [style]="bdate">
+                <i class='bx bx-calendar'></i>
+                <input placeholder="date" type="date" (change)="onselecte($event)"  formControlName="date" >
+             </div>
+             <p class="m">{{date}}</p>
+            </div>
+            <div class="region">
+                <label for="#">Gouvernerat</label>
+             <div class="cont" [style]="bgov">
+                <i class='bx bx-map-pin'></i>
+                <select  name="select" formControlName="gov">
+                    <option value="">Gouvernerat</option>
+                    <option value="ariana">ariana</option>
+                    <option value="ben aarous">ben aarous</option>
+                    <option value="bizerte">bizerte</option>
+                    <option value="Béja">Béja</option>
+                    <option value="Gabès">Gabès</option>
+                    <option value="Gafsa">Gafsa</option>
+                    <option value="Jendouba">Jendouba</option>
+                    <option value="Kairouan">Kairouan</option>
+                    <option value="Kasserine">Kasserine</option>
+                    <option value="Kébili">Kébili</option>
+                    <option value="Le Kef">Le Kef</option>
+                    <option value="Gafsa">Gafsa</option>
+                    <option value="Mahdia">Mahdia</option>
+                    <option value="La Manouba">La Manouba</option>
+                    <option value="Médenine">Médenine</option>
+                    <option value="Monastir">Monastir</option>
+                    <option value="Nabeul">Nabeul</option>
+                    <option value="Sfax">Sfax</option>
+                    <option value="Sidi Bouzid">Sidi Bouzid</option>
+                    <option value="Siliana">Siliana</option>
+                    <option value="Sousse">Sousse</option>
+                    <option value="Tozeur">Tozeur</option>
+                    <option value="Tunis">Tunis</option>
+                    <option value="Zaghouan">Zaghouan</option>
+                   
+                   </select>
+             </div>
+            <p class="m">{{gov}}</p>
+            </div>
+            <div class="region">
+                <label for="#">Région</label>
+             <div class="cont" [style]="breg">
+                <i class='bx bx-map' ></i>
+                <input placeholder="Région" type="text" formControlName="region" >
+             </div>
+             <p class="m">{{reg}}</p>
+            </div>
+            <div class="region">
+              
+              <label for="#">Spécialité</label>
+           <div class="cont" [style]="bsp">
+            <i class='bx bx-briefcase'></i>
+              <select  name="select" formControlName="sp" >
+                  <option value="Cuisinier">Cuisinier</option>
+                  <option value="Serveur">Serveur</option>
+                 </select>
+           </div>
+          <p class="m">{{sp}}</p>
+          </div>
+            <div class="region">
+                <label for="#">Experience</label>
+             <div class="con">
+               <textarea name="x"  [style]="bexp" id="" cols="60" placeholder="Experience" rows="10" formControlName="exp"></textarea>
+             </div>
+             <p class="m">{{exp}}</p>
+            </div>
+          
+            <div class="region">
+                <label for="#">Gender</label>
+             <div class="rad">
+               <input type="radio" name="rad" checked formControlName="rad1" value="Homme"> <span>Homme</span>&nbsp;&nbsp;&nbsp;
+               <input type="radio" name="rad" formControlName="rad1" value="Femme"> <span>Femme</span>
+             </div>
+            </div>
+            <p class="m">{{sexe}}</p>
+            <div class="region">
+              <label for="#">Etat</label>
+           <div class="rad">
+             <input type="radio" name="rad2"  formControlName="rad2" value="Stagiere"> <span>Stagiere</span>&nbsp;&nbsp;&nbsp;
+             <input type="radio" name="rad2" formControlName="rad2" value="Employee"> <span>Employee</span>
+            </div>
+           
+                  </div>
+                  <p class="m">{{etat}}</p>
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Ajouter votre CV</label>
+                    <input class="form-control" type="file" id="formFile" (change)="onselectcv($event)">
+                  </div>
+            <div class="b">
+                <div class="btn">
+                    <button (click)="onsubmit()">Enregistrer</button>
+                                    </div>
+            </div>
+            
+        </form>
+        </body>
+       </div>
+      
+    </div>
+   </div>
+ 
+
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,24 @@
+<app-header></app-header>
+<section>
+    <div class="list">
+       <div class="e">
+        <div class="emp" *ngFor="let ent of emps">
+            <div class="img">
+                <img src="assets/{{ent.filee.titlefile}}" alt="">
+            </div>
+            <div class="text">
+        <div class="nom">
+            <p>{{ent.nom}}</p>
+        </div>
+        <div class="sp">
+            <p>{{ent.specialite}}</p>
+        </div>
+        <div class="sp">
+            <p>{{ent.role}}</p>
+        </div>
+            </div>
+        </div>
+       
+       </div>
+        </div>
+</section>

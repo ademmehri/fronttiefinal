@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<section>
+    <div class="image">
+        <img class="im" src="assets/patron.png" alt="">
+    </div>
+    <div class="form">
+      <div class="titre">
+        <h1> </h1>
+      </div>
+
+    
+        <div class="donnee">
+              <form [formGroup]="formsignin"  class="form">
+             <div class="p1">
+                    
+   <div class="head">
+    
+    <div class="pp">
+      <div class="circle">
+      
+        <img [src]="url"  alt="">
+      
+        </div>
+    
+    </div>
+      
+   <div class="upload">
+  
+    <input name="file" id="file" class="inputfile"  type="file" (change)="onselectfile($event)"/>
+    <label for="file" class="file"><i class='bx bx-upload'></i> Modifier votre image</label>
+   </div>
+     </div>
+       
+    <div class="deux">
+
+    </div>
+    <div class="email">
+      <label for="#">Numero</label>
+      <div>
+        <input type="number" placeholder="Numero" formControlName="numero">
+      </div>
+      <p class="m">{{result5}}</p>
+    </div>
+            <div class="email">
+              <label for="#">Email</label>
+              <div>
+                <input type="text" placeholder="Email" formControlName="email">
+              </div>
+              <p class="m">{{result3}}</p>
+            </div>
+          
+            <div class="email">
+              <label for="#">Nouveau Mot de passe</label>
+              <div>
+                <input type="password" placeholder="+6 caractere" formControlName="mp">
+              </div>
+            </div>
+<p class="m">{{result4}}</p>
+<div class="btn">
+  <button (click)="onsubmit()" >Modifier</button>
+</div>
+             </div>
+
+              </form>
+          </div>
+         
+    </div>
+
+</section>
+
+

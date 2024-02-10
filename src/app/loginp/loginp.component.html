@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<section class="login">
+    <div class="image">
+<img class="im" src="assets/b.png" alt="">
+    </div>
+    <div class="form">
+        <div class="forms-container">
+            <div class="signin-signup">
+              <form [formGroup]="formsignin"  class="sign-in-form">
+                  <img src="assets/finall.png" class="img"  alt="hello">
+                      <div class="input-field">
+                          <i class='bx bxs-user'></i>
+                          <input type="text" placeholder="Email" formControlName="email" name="t" >
+                      </div>
+                    <p class="m">{{result1}}</p>
+                      <div class="input-field">
+                          <i class='bx bxs-lock-alt' ></i>
+                          <input type="password" placeholder="Mot passe" formControlName="mp" name="p" >
+                      </div>
+                      <p class="m">{{result2}}</p>
+                      <button type="button" value="connectez-vous" (click)="onsubmit()"  class="btn solid">connectez-vous</button>
+                      <p class="social-text"><a class="mt" href="#">Mot passe oublié</a></p>
+      
+              </form>
+            </div></div>
+    </div>
+
+</section>
