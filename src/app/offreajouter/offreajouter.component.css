@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+section{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/assets/mob.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    background-size:cover; /* Pour s'assurer que l'image couvre toute la div */
+    background-repeat: no-repeat; /* Pour éviter que l'image ne se répète */
+    background-position: center; /* Pour centrer l'image */
+}
+.p1{
+    background-color: #F8F8FE;
+    height: 100px;
+   clip-path: polygon(100% 0, 93% 100%, 100% 100%, 0% 100%, 0% 0%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.sp1{
+    color: #2772D6;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.donee{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.donne p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+
+}
+.sp2{
+    font-weight: 700;
+}
+.p2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+table{
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(1, 1,1, 15%);
+    width: 75%;
+    padding-left: 10px;
+    padding-top: 10px;
+    background: none;
+  
+}
+
+table tr td img{
+    width: 45px;
+    height: 45px;
+   border-radius: 50%;
+}
+table tr td{
+padding-top: 20px;
+}
+table thead{
+    border-bottom: 1px solid #dedede;
+    padding-left: 10px;
+}
+table thead th{
+    padding: 10px;
+}
+table tr td{
+    padding: 10px;
+    font-size: 15px;
+}
+table tr td .b{
+    background-color: #2772D6;
+    width: 100px;
+    padding: 5px;
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+@media screen and (max-width:680px) {
+section{
+    margin-top: 100px;
+}
+table .img{
+    display: none;
+}
+.titre h1{
+    font-size: 20px;
+}
+.sp1{
+    font-size: 20px;
+}
+table{
+    font-size: 14px;
+}
+table tbody tr td{
+    font-size: 14px;
+}
+table tbody tr td .b{
+    font-size: 14px;
+    width: 60px;
+}
+.p2{
+    width: 100%;
+}
+.p1{
+    clip-path: none;
+}
+}
+@media screen and (min-width:681px) and (max-width:1150px) {
+    section{
+        margin-top: 100px;
+    }
+}

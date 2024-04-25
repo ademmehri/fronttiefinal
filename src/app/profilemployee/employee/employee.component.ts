@@ -13,12 +13,17 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+  isDropdownOpen: boolean = false;
+previousListLength: number = 0;
+listoff:any=[]
+nombreOffres: number = this.listoff.length
+
   id!:bigint;
 emp!:employee
 file!:filee
-url!:string
+url='assets/par2.png'
 cin!:string
-listoff!:listoffre[]
+
 empr!:employee;
 $element:any
 cv!:filee
@@ -34,13 +39,14 @@ bcolor=""
     this.userservice.getprofilemployee(this.id).subscribe(
         res=>{
 this.emp=res
-this.cin=this.emp.cin
+console.log(this.emp)
         }
       )
 
 
   }
   ngOnInit(): void {
+    localStorage.clear()
     this.userservice.getfileprofile(this.id).subscribe(
       res=>{
 this.file=res
@@ -50,13 +56,13 @@ this.url="assets/"+this.file.titlefile
      this.userservice.getoffre(this.id).subscribe(
       res=>{
         this.listoff=res
-        console.log(this.listoff)
-        if(this.listoff.length!=0){
-  this.bcolor="color: red;"
-        }
-        else{
-          this.bcolor="color: #3a6cf4;"
-        }
+        const newLength = this.listoff.length;
+        const diff = newLength - this.previousListLength;
+        this.nombreOffres = diff;
+        this.previousListLength = newLength;
+        console.log("Différence de nombre d'offres : " + diff);
+        console.log("Offres actuelles : ");
+        console.log(this.listoff);
 
       }
 
@@ -81,6 +87,18 @@ this.url="assets/"+this.file.titlefile
   }
 scroll(){
   window.scrollTo(0, document.body.scrollHeight);
+}
+toggleDropdown() {
+  this.isDropdownOpen = !this.isDropdownOpen;
+  if (!this.isDropdownOpen) {
+  
+    this.nombreOffres = 0;
+  }
+}
+navigate(offre:listoffre){
+
+  localStorage.setItem('desc',offre.descoffre)
+  this.route.navigate(["pageoffreemployeur/"+offre.id]);
 }
 
 }

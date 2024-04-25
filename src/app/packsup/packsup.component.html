@@ -1,0 +1,269 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<app-header></app-header>
+<head>
+  <title>
+      Tarif-TIEJOB
+  </title>
+</head>
+<section>
+  <div class="p1">
+    <div>
+   <div class="titre">
+       <h1>
+        Les Packs de <span>TIE JOB</span>
+       </h1>
+              </div>
+          
+    </div>
+        </div>
+
+<div class="p2">
+  <div class="cards" >
+    <div class="car">
+ <div class="img">
+   <img src="assets/directeur.png" alt="image_dircteur">
+ </div>
+ <h3>Superieur</h3>
+ <div class="d">
+   <p>6 Mois</p>
+ </div>
+ <div class="p">
+   <p>6900 DT</p>
+ </div>
+ <div class="bar"></div>
+ <div class="b">
+   <div class="bb" (click)="acheter('sixmois')">
+     <a >Acheter</a>
+   </div>
+ </div>
+    </div>
+    <div class="car">
+      <div class="img">
+        <img src="assets/directeur.png" alt="image_dircteur">
+      </div>
+      <h3>Superieur</h3>
+      <div class="d">
+        <p>1 ans</p>
+      </div>
+      <div class="p">
+        <p>9900 DT</p>
+      </div>
+      <div class="bar"></div>
+      <div class="b">
+        <div class="bb" (click)="acheter('unans')">
+          <a >Acheter</a>
+        </div>
+      </div>
+         </div>
+   </div>
+   <div class="cards" *ngIf=" pac=='rest_supperieur' ">
+    <div class="car">
+ <div class="img">
+   <img src="assets/directeur.png" alt="image_dircteur">
+ </div>
+ <h3>Superieur</h3>
+ <div class="d">
+   <p>6 Mois</p>
+ </div>
+ <div class="p">
+   <p>4900 DT</p>
+ </div>
+ <div class="bar"></div>
+ <div class="b">
+   <div class="bb" (click)="acheter('sixmois')">
+     <a >Acheter</a>
+   </div>
+ </div>
+    </div>
+    <div class="car">
+      <div class="img">
+        <img src="assets/directeur.png" alt="image_dircteur">
+      </div>
+      <h3>Superieur</h3>
+      <div class="d">
+        <p>1 ans</p>
+      </div>
+      <div class="p">
+        <p>6900 DT</p>
+      </div>
+      <div class="bar"></div>
+      <div class="b">
+        <div class="bb" (click)="acheter('unans')">
+          <a >Acheter</a>
+        </div>
+      </div>
+         </div>
+   </div>
+</div>
+<div class="cards" *ngIf=" pac=='restaurer' || pac=='rest_restaurer'  ">
+  <div class="car">
+<div class="img">
+ <img src="assets/chef-pack.png" alt="image_chef">
+</div>
+<h3>Restaurer</h3>
+<div class="d">
+ <p>6 Mois</p>
+</div>
+<div class="p">
+ <p>3900 DT</p>
+</div>
+<div class="bar"></div>
+<div class="b">
+ <div class="bb" (click)="acheter('sixmois')">
+   <a >Acheter</a>
+ </div>
+</div>
+  </div>
+  <div class="car">
+    <div class="img">
+      <img src="assets/chef-pack.png" alt="image_chef">
+    </div>
+    <h3>Restaurer</h3>
+    <div class="d">
+      <p>1 ans</p>
+    </div>
+    <div class="p">
+      <p>5900 DT</p>
+    </div>
+    <div class="bar"></div>
+    <div class="b">
+      <div class="bb" (click)="acheter('unans')">
+        <a >Acheter</a>
+      </div>
+    </div>
+       </div>
+ </div>
+ <div class="cards" *ngIf=" pac=='servir' || pac=='rest_servir'  ">
+  <div class="car">
+<div class="img">
+ <img src="assets/serveur.png" alt="image_serveur">
+</div>
+<h3>Servir</h3>
+<div class="d">
+ <p>6 Mois</p>
+</div>
+<div class="p">
+ <p>1900 DT</p>
+</div>
+<div class="bar"></div>
+<div class="b">
+ <div class="bb" (click)="acheter('sixmois')">
+   <a >Acheter</a>
+ </div>
+</div>
+  </div>
+  <div class="car">
+    <div class="img">
+      <img src="assets/serveur.png" alt="image_serveur">
+    </div>
+    <h3>Servir</h3>
+    <div class="d">
+      <p>1 ans</p>
+    </div>
+    <div class="p">
+      <p>2900 DT</p>
+    </div>
+    <div class="bar"></div>
+    <div class="b">
+      <div class="bb" (click)="acheter('unans')">
+        <a >Acheter</a>
+      </div>
+    </div>
+       </div>
+ </div>
+
+
+
+
+
+ <div class="cards" *ngIf=" pac=='gold' ">
+  <div class="car">
+<div class="img">
+ <img src="assets/or.png" alt="image_gold">
+</div>
+<h3>Gold</h3>
+<div class="d">
+ <p>6 Mois</p>
+</div>
+<div class="p">
+ <p>9900 DT</p>
+</div>
+<div class="bar"></div>
+<div class="b">
+ <div class="bb" (click)="acheter('sixmois')">
+   <a >Acheter</a>
+ </div>
+</div>
+  </div>
+  <div class="car">
+    <div class="img">
+      <img src="assets/or.png" alt="image_gold">
+    </div>
+    <h3>Gold</h3>
+    <div class="d">
+      <p>1 ans</p>
+    </div>
+    <div class="p">
+      <p>13900 DT</p>
+    </div>
+    <div class="bar"></div>
+    <div class="b">
+      <div class="bb" (click)="acheter('unans')">
+        <a >Acheter</a>
+      </div>
+    </div>
+       </div>
+ </div>
+ <div class="cards" *ngIf=" pac=='rest_gold' ">
+  <div class="car">
+<div class="img">
+ <img src="assets/or.png" alt="image_gold">
+</div>
+<h3>Gold</h3>
+<div class="d">
+ <p>6 Mois</p>
+</div>
+<div class="p">
+ <p>7900 DT</p>
+</div>
+<div class="bar"></div>
+<div class="b">
+ <div class="bb" (click)="acheter('sixmois')">
+   <a >Acheter</a>
+ </div>
+</div>
+  </div>
+  <div class="car">
+    <div class="img">
+      <img src="assets/or.png" alt="image_gold">
+    </div>
+    <h3>Gold</h3>
+    <div class="d">
+      <p>1 ans</p>
+    </div>
+    <div class="p">
+      <p>9900 DT</p>
+    </div>
+    <div class="bar"></div>
+    <div class="b">
+      <div class="bb" (click)="acheter('unans')">
+        <a >Acheter</a>
+      </div>
+    </div>
+       </div>
+ </div>
+</section>
+<div class="footer">
+  <div class="f">
+    <div class="ic"><i class='bx bxs-envelope'></i></div>
+    <p>Contact@TieJob.com</p>
+  </div>
+  <div class="f">
+    <div class="ic"><i class='bx bxs-phone'></i></div>
+    <p>+216-24-480-550</p>
+  </div>
+  <div class="f">
+    <div class="ic"><i class='bx bxs-city' ></i></div>
+    <p>Sidi-Thabet-Ariana-2020</p>
+  </div>
+</div>

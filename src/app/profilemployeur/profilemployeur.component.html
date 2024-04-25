@@ -1,0 +1,67 @@
+<app-header></app-header>
+<head>
+    <title>TIEJOB</title>
+</head>
+<div class="con">
+    <div class="pp1">
+        <div>
+            <div class="titre">
+                <h1>
+                    Détails <span class="sp1">personnel</span> </h1>
+                        </div>
+                        <div class="donee">
+                            <p>Bienvenue sur la page  des détails personnels. Votre contribution à notre site est inestimable, et nous souhaitons nous assurer que toutes vos informations sont à jour dans nos dossiers.</p>
+                        </div>
+                
+        </div>
+            </div>
+   <div class="p">
+    <div class="profil" *ngIf="emp">
+        <div class="icon">
+            <a href="/updatepatron/{{emp.id}}"> <i class='bx bx-pencil pen'></i></a>
+            <i routerLink="/offreajouter/{{emp.id}}" class='bx bxs-briefcase'></i>
+            <i routerLink="/pagepatron/{{emp.id}}" class='bx bx-search fa'></i>
+          <i (click)="logout()" class='bx bx-exit pen'></i>
+         </div>
+        <div class="head">
+            <div class="image">
+                <img [src]="url" alt="image_user">
+            </div>
+            <div class="deux">
+             <div class=""><p class="n">{{emp.nom}}</p>
+                <p class="em">{{emp.email}}</p>
+            </div> 
+            </div>
+        </div>
+        <div class="info">
+        
+            <div class="p2">
+                <h2>Données <span class="s">Personnelles</span></h2>
+                <div class="donnee">
+         <table>
+            <tr>
+                <td class="t">Spécialité</td>
+                <td class="g">{{emp.specialite}}</td>
+            </tr>
+                        <tr>
+                            <td class="t">Téléphone</td>
+                            <td class="g">{{emp.num}}</td>
+                        </tr>
+                        <tr>
+                            <td class="t">Adresse</td>
+                            <td class="g">{{emp.gouvernerat}}</td>
+                        </tr>
+                    
+                    
+                    </table>
+                  
+                </div>
+            </div>
+        
+    
+        </div>
+        </div>
+   </div>
+
+</div>
+<app-footer></app-footer>

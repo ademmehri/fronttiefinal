@@ -1,22 +1,23 @@
 <app-header></app-header>
+<head>
+    <title>
+        TIEJOB
+    </title>
+</head>
 <div class="con">
     <div class="pp1">
         <div>
-            <div class="titre">
-                <h1>
-                    Détails <span class="sp1">personnel</span> </h1>
-                        </div>
-                        <div class="donee">
-                            <p>Ajoutez votre <span class="sp2">photo</span>  et vos <span class="sp2">informations personnelles</span>  pour augmenter votre visibilité lorsque les employeurs recherchent des CV.</p>
-                        </div>
-                
+        <div class="titre">
+        <h1>
+        Les offres <span class="sp1">reçues</span> </h1>
+        </div>  
         </div>
-            </div>
+        </div>
 <div class="p">
     <div class="profil">
         <div class="head">
             <div class="image">
-                <img [src]="url" alt="">
+                <img [src]="url" alt="image_employeur">
                 <div class="icon">
     
                     <a href="https://www.google.tn/maps/place/{{emp.gouvernerat}}" target="_blank"><i class='bx bxs-map pen'></i></a>
@@ -34,7 +35,7 @@
                 </div>
                 <div class="input">
                     <label for="#">Email</label>
-                    <p>{{emp.mail}}</p>
+                    <p>{{emp.email}}</p>
                 </div>
             </div>
         
@@ -43,7 +44,7 @@
           
             </div>
             <div class="p3">
-                <h2>Off<span class="s">res</span> </h2>
+                <h2>Off<span class="s">re</span> </h2>
                 <div class="offre">
         
             
@@ -52,7 +53,7 @@
         <div class="d">
             <i class='bx bxs-briefcase-alt-2'></i>
             
-            <p>  Lorem ipsum dolor sit amet.</p>
+            <p>{{desc}}</p>
         </div>
         
      </div>

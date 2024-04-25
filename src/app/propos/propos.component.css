@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+section{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.pp1{
+    background-color: #F8F8FE;
+    height: 175px;
+   clip-path: polygon(100% 0, 93% 100%, 100% 100%, 0% 100%, 0% 0%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.sp1{
+    color: #2772D6;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.donee{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 100%;
+}
+.donee p{
+    font-size: 20px;
+   
+}
+.p2{
+  
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.a1{
+    width: 400px;
+    height: 100vh;
+
+}
+.a2{
+    display: flex;
+    width: 100%;
+}
+
+.card2{
+    width: 35%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #fff;
+  
+    margin-right: 10px;
+}
+.img{
+   
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+padding: 20px;
+    width: 70%;
+}
+.card{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #fff;
+    height: 250px;
+    
+  box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+}
+.sc{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.text span{
+    color: #2772D6;
+    font-weight: 600;
+}
+.text p{
+    line-height: 30px;
+    color: #666666;
+}
+.do{
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+    margin-top: 5px;
+    padding: 50px;
+padding-left: 200px;
+padding-right: 200px;
+    line-height: 50px;
+    background-color: #fff;
+}
+
+.do h3{
+    color: #2772D6;
+}
+.do span{
+    color: #2772D6;
+    font-weight: 600;
+    font-size: 18px;
+}
+.do .spp{
+    color: #2772D6;
+    font-weight: 600;
+    font-size: 16px;
+}
+.c1{
+    height: 200px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+  margin-right: 10px;
+  background-color: #2772D6;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+.c1 h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+.c1 p{
+    font-size: 15px;
+}
+.c2{
+    height: 140px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+  margin-right: 10px;
+  background-color: #2772D6;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+margin-top: 20px;
+transition: 1s ease;
+
+}
+.n h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.n p{
+    font-size: 15px;
+}
+.c2:hover{
+    cursor: pointer;
+
+}
+.c1:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:680px) {
+    .pp1{
+        clip-path: none;
+     height: 150px;
+        width: 100%;
+    }
+  .card2{
+    display: none;
+  }
+  .do{
+
+    padding: 10px;
+  }
+  .a1{
+    display: none;
+  }
+  .titre h1{
+    font-size: 25px;
+  }
+  .sp1{
+    font-size: 25px;
+  }
+  .donee{
+    width: 95%;
+  }
+  .donee p{
+    font-size: 15px;
+   text-align: center;
+  }
+  .card{
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+  }
+  .img img{
+width: 100px;
+height: 130px;
+padding-left: 5px;
+  }
+  .text h3{
+    font-size: 18px;
+  }
+  .text p{
+    font-size: 14px;
+  }
+  .do p{
+    font-size: 14px;
+  }
+    }
+    @media screen and (min-width:681px) and (max-width:800px) {
+        .pp1{
+            clip-path: none;
+         height: 150px;
+            width: 100%;
+        }
+      .card2{
+        display: none;
+      }
+      .do{
+        margin-top: 25px;
+        padding: 10px;
+        margin-left: 5px;
+      }
+      .a1{
+        display: none;
+      }
+      .titre h1{
+        font-size: 25px;
+      }
+      .sp1{
+        font-size: 25px;
+      }
+      .donee{
+        width: 95%;
+      }
+      .donee p{
+        font-size: 15px;
+       text-align: center;
+      }
+      .card{
+        width: 100%;
+        height: 100%;
+        margin-left: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .img img{
+    width: 140px;
+    height: 170px;
+    padding-left: 5px;
+      }
+      .text h3{
+        font-size: 24px;
+      }
+      .text p{
+        font-size: 16px;
+      }
+      .do p{
+        font-size: 16px;
+      }
+    }
+    @media screen and (min-width:801px) and (max-width:1150px) {
+        .pp1{
+            clip-path: none;
+         height: 150px;
+            width: 100%;
+        }
+     
+      .do{
+        margin-top: 25px;
+        padding: 10px;
+        margin-left: 5px;
+      }
+      .a1{
+        display: none;
+      }
+      .titre h1{
+        font-size: 30px;
+      }
+      .sp1{
+        font-size: 30px;
+      }
+      .donee{
+        width: 95%;
+      }
+      .donee p{
+        font-size: 15px;
+       text-align: center;
+      }
+      .card{
+        width: 79%;
+        height: 300px;
+        margin-left: 5px;
+      }
+      .img img{
+    width: 140px;
+    height: 170px;
+    padding-left: 5px;
+      }
+      .text h3{
+        font-size: 24px;
+      }
+      .text p{
+        font-size: 16px;
+      }
+      .do p{
+        font-size: 16px;
+      }
+    }
+
+

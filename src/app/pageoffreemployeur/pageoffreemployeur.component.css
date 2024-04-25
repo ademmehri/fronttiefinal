@@ -11,12 +11,15 @@ margin-right: 5px;
 }
 .pp1{
     background-color: #F8F8FE;
-    height: 175px;
+    height: 110px;
    clip-path: polygon(100% 0, 93% 100%, 100% 100%, 0% 100%, 0% 0%);
    display: flex;
    align-items: center;
    justify-content: center;
    width: 100%;
+}
+.bxs-map{
+    cursor: pointer;
 }
 .p{
     margin-top: 10px;
@@ -24,6 +27,10 @@ margin-right: 5px;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    background-image: url('/assets/mob.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    background-size: cover; /* Pour s'assurer que l'image couvre toute la div */
+    background-repeat: no-repeat; /* Pour éviter que l'image ne se répète */
+    background-position: center; /* Pour centrer l'image */
 }
 .titre{
     display: flex;
@@ -79,8 +86,9 @@ h1{
 }
 
 .cadre{
-    width: 460px;
-    height: 86px;
+    width: 50%;
+    min-height: 86px;
+    height: auto;
     border-radius: 16px;
     background-color: #EDEDED;
     padding: 10px;
@@ -169,23 +177,16 @@ h2{
 
 }
 @media screen and (max-width:680px) {
-    .container{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-     
-        margin-top: 70px;
-        
-        
+    .p{
+        background: none;
     }
-    .icon i{
-        padding: 10px;
-        font-size: 1.5em;
+    .con{
+        margin-top: 100px;
     }
-    .pen{
-        color: #3a6cf4;
+    .pp1{
+        clip-path: none;
     }
+
     .profil{
         width: 90%;
     
@@ -194,119 +195,55 @@ h2{
     padding-bottom: 10px;
       box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
     }
-    .image{
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
+    .titre h1{
+        font-size: 25px;
+    }
+    .sp1{
+        font-size: 25px;
     }
     .image img{
-       height: 150px; 
-    width: 150px;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     }
-    .nom p{
-        font-weight: bold;
-        font-size: 2em;
-        color: #3a6cf4;
-        padding: 10px;
-    }
-    .info{
-        padding: 10px;
-    }
-    .input label{
-        padding: 10px;
-        font-weight: 600;
-        font-size: 1.1em;
-    color: #3a6cf4;
-    }
-    .input p{
-     padding-left: 10px;
-        font-weight: 300;
-    }
-    h2{
-        color: #3a6cf4;
-        padding-bottom: 10px;
-    }
-    .map{
-        border: #3a6cf4 1px solid;
-        width: 100%;
-        height: 350px;
-       
-    }
-    .map iframe{
-        width: 100%;
-    
-    }
+  
+   
+
     
 }
 @media screen and (min-width:679px) and (max-width:1024px) {
-    .container{
-        width: 100%;
-        height: 100vh;
-        display: block;
-        justify-content: left;
-     
-        margin-top: 70px;
-        
-        
+    .con{
+        margin-top: 100px;
+min-height: 100%;
     }
-    .icon i{
-        padding: 10px;
-        font-size: 1.5em;
+    .titre h1{
+        font-size: 30px;
     }
-    .pen{
-        color: #3a6cf4;
+    .sp1{
+        font-size: 30px;
     }
     .profil{
-        width: 90%;
-    
-       height: 75%;
-      margin-bottom: 20px;
-    padding-bottom: 10px;
-      box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+        width: 70%;
+        min-height: 100%;
     }
-    .image{
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
+    .profil, .p3, .info {
+        min-height: 100%;
     }
-    .image img{
-       height: 150px; 
-    width: 150px;
-    border-radius: 50%;
-    }
-    .nom p{
-        font-weight: bold;
-        font-size: 2em;
-        color: #3a6cf4;
-        padding: 10px;
-    }
-    .info{
-        padding: 10px;
-    }
-    .input label{
-        padding: 10px;
-        font-weight: 600;
-        font-size: 1.1em;
-    color: #3a6cf4;
-    }
-    .input p{
-     padding-left: 10px;
-        font-weight: 300;
-    }
-    h2{
-        color: #3a6cf4;
-        padding-bottom: 10px;
-    }
-    .map{
-        border: #3a6cf4 1px solid;
-        width: 100%;
-        height: 350px;
-       
-    }
-    .map iframe{
-        width: 100%;
-    
+    .cadre{
+        width: 70%;
+        height:100px;
     }
     
+}
+@media screen and (min-width:1024px) and (max-width:1150px) {
+    .con{
+    margin-top: 100px;
+    min-height: 100%;
+    }
+    .profil{
+        width: 50%;
+        min-height: 100%;
+    }
+    .profil, .p3, .info {
+        min-height: 100%;
+    }
 }

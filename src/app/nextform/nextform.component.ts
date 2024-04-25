@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { employee } from '../models/employee.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
   templateUrl: './nextform.component.html',
   styleUrls: ['./nextform.component.css']
 })
-export class NextformComponent {
+export class NextformComponent implements OnInit {
   response!:any
   token=""
 bdate=""
@@ -29,15 +29,19 @@ sp=""
 gov=""
 bgov=""
   timg=""
+  showlist=false
 d="";
-  url="";
-  
+  url="assets/uss.png";
+spe=['Barman','Chef de projet événementiel','Responsable communication et événementiel','Réceptionniste','Chef-réceptionniste','Veilleur de nuit','Directeur d’hébergement','Directeur d’hôtel','Adjoint de direction en hôtellerie','Directeur financier d’un hôtel','Directeur de la restauration','Manager spécialisé dans le luxe','Spa manager','Femme de chambre et valet de chambre','Gouvernante','Lingère','Guest Relation Manager','Yield manager','Chef de cuisine','Chef de partie','Commis de cuisine','Chef cuisinier ou chef de production en restauration collective','Chef-gérant en restauration collective','Économe','Manager dans la restauration','Directeur en restauration rapide','Manager d’un restaurant rapide','Gérant','Chef d’équipe d’un restaurant rapide','Pizzaïolo','Pâtissier','Boucher','Boulanger','Poissonnier','Chocolatier-confiseur','Serveur de restaurant','Chef de rang','Maître d’hôtel','Garçon de café','Plongeur','Majordome (Butler)','portier','Crêpier']
   file!:File;
   cv!:File
  empl!:employee
 num!:string
 result!:employee
   formsignin!:FormGroup;
+  input: string = '';
+  emptyarray=['hello']
+  listfinal=['']
   constructor(private fb:FormBuilder,private route:Router,private userserv:UserService,private router:ActivatedRoute){
  
     this.formsignin=this.fb.group(
@@ -55,6 +59,7 @@ result!:employee
   }
   ngOnInit(): void {
     this.empl=JSON.parse(localStorage.getItem("emp")!)
+    console.log(this.spe)
   }
 
   onsubmit(){
@@ -102,6 +107,10 @@ result!:employee
       this.bsp="border: red 2px solid;"
       this.sp="champ obligatoire"
     }
+   else if(!this.spe.includes(this.formsignin.controls['sp'].value)){
+      this.sp="Sélectionnez votre spécialité"
+      this.bsp="border: red 2px solid;"
+    }
     else{
       this.bsp="border: green 2px solid;"
       this.sp=""
@@ -133,10 +142,12 @@ result!:employee
       this.empl.date=this.formsignin.controls['date'].value;
       this.empl.etat=this.formsignin.controls['rad2'].value;
   console.log(this.empl)
-  this.userserv.existmail(this.empl.mail).subscribe(
+  this.userserv.existmail(this.empl.email).subscribe(
     res=>{
+      console.log("resultat")
+      console.log(res)
       if(res==false){
-        this.userserv.verificationemail(this.empl.mail).subscribe(
+        this.userserv.verificationemail(this.empl.email).subscribe(
           res=>{
             this.response=res
        this.token= this.response.token
@@ -153,14 +164,13 @@ result!:employee
                this.userserv.adduser(this.empl).subscribe(
                  res=>{
               
-                   this.userserv.addfile(this.file,this.result.mail).subscribe(
+                   this.userserv.addfile(this.file,this.empl.email).subscribe(
                     res=>{
                       console.log("res")
                     }
                   )
-                  console.log("cv"+this.cv)
                   if(this.cv!=undefined){
-                    this.userserv.addcv(this.cv,this.result.mail).subscribe(
+                    this.userserv.addcv(this.cv,this.empl.email).subscribe(
                       res=>{
                         console.log("res")
                       }
@@ -172,7 +182,7 @@ result!:employee
                Swal.fire({
                  position: "top-end",
                  icon: "success",
-                 title: "Candidat inscrit",
+                 title: "Candidat enregistré",
                  showConfirmButton: false,
                  timer: 1500
                });
@@ -224,9 +234,7 @@ result!:employee
       reader.readAsDataURL(e.target.files[0]);
       this.cv=e.target.files[0];
       console.log(this.file.name);
-    
     }
-  
   }
 
   onselecte(e:any){
@@ -254,7 +262,38 @@ result!:employee
     // Retourner true si toutes les conditions sont remplies, sinon false
     return aUnChiffre && aUneMajuscule && aUneMinuscule;
   }
+  onKeyUp(e:any): void {
+    this.showlist=true
+    console.log('Key pressed:',e.target.value);
+    let userdata=e.target.value
+   if(e.target.value==''){
+    this.showlist=false
+   }
+    if(userdata){
+      this.emptyarray=this.spe.filter(
+        (data)=>{
+return data.toLocaleLowerCase().startsWith(userdata.toLocaleLowerCase());
+        }
+      );
+      this.emptyarray=this.emptyarray.map(
+  (data)=>{
+    return data
+  }
+)
+if(!this.emptyarray.length){
+this.input=e.target.value
+}
+else{
+  this.listfinal=this.emptyarray
+  this.input=""
+}
 
-
+    }
+ console.log(this.emptyarray)
+  }
+  clickli(e:any){
+    this.formsignin.controls['sp'].setValue(e)
+  this.showlist=false
+  }
 
 }

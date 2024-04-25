@@ -1,63 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 section{
-    min-height: 100vh;
-    height: 100%;
+  
+    height:100vh;
     width: 100%;
-    display: flex;
-  
-    justify-content: center;
-    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F4F4;
+    margin-top: 0px;
+  padding-top: 0px;
 }
-.list{
-    height: 100vh;
+.s{
+  display: flex;
  
-  
-    width: 50%;
-    background-color:white;
-    box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
-    margin: 10px;
-    justify-content: center;
-    display: flex;
+
+  height: 100%;
+  width: 100%;
 }
-.emp{
-    background-color: white;
-    box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
-    margin: 10px;
-    display: flex;
-    
-    width: 80%;
-    height: 150px;
-  padding: 10px;
-  border-radius: 30px;
+.p1{
+  height: 100%;
+  width: 18%;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(1, 1,1, 15%);
+  position: fixed;
+ 
 }
 .img{
-    width: 100px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  height: 110px;
-  margin: 10px;
-    padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .img img{
+  width: 160px;
+  height: 90px;
+}
+.ic p{
+  padding: 0px;
+  margin: 0px;
+}
+.ic{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #2772D6;
+ cursor: pointer;
+}
+
+.con{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.ic i{
+  padding-right: 10px;
+}
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.p2{
+  padding: 20px;
+  height:auto;
+  width: 100%;
+  
+  margin-left: 300px;
+  margin-top: 10px;
+}
+.t2{
+  display: flex;
+  align-items: center;
+
+}
+.rech{
+  display: flex;
+  align-items: center;
+}
+.rech input{
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    height: 100%;
+    font-size: 15px;
+  }
+  .rech i{
+    color: #ddd;
+    font-size: 18px;
+  }
+.rech{
+  background-color: #fff;
+  height: 35px;
+  padding: 5px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(1, 1,1, 15%);
+margin-right: 20px;
+}
+.icon{
+  margin-left: 10px;
+  margin-right: 10px;
+ 
+}
+.icon i{
+  padding-right: 20px;
+  font-size: 21px;
+  color: #2772D6;
+}
+.image i{
+color: #36407D;
+font-size: 25px;
+
+}
+.t h2{
+  font-family: "Pacifico", cursive;
+  color: #2772D6;
+}
+.imgg img{
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+}
+.a1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.car{
+    width: 250px;
+    height: 120px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(1, 1,1, 15%);
+    border-radius: 20px;
+    padding: 15px;
+    margin-right: 20px;
+}
+.car h3{
+    font-size: 21px;
+    font-weight: 600;
+}
+.car p{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: #2772D6;
+    font-size: 35px;
+    font-weight: 600;
+}
+.a2{
+    display: flex;
+    margin-top: 50px;
+}
+.aa1{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(1, 1,1, 15%);
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.tt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tt p{
+    color: #2772D6;
+    font-weight: 600;
+}
+.tt select{
+    border: none;
+   background-color: #F4F4F4;
+   width: 200px;
+   height: 35px;
+   border-radius: 20px;
+   padding: 5px;
+}
+table{
+   
+    margin-top: 20px;
     width: 100%;
-height: 100%;
 }
-.text{
-    margin-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+table tr td img{
+    width: 50px;
+    height: 50px;
 }
-.nom p{
-    color: black;
-    font-weight: 700;
-    font-size: 20px;
-}
-.sp p{
-    color: #3a6cf4;
-    font-weight: 500;
-}
-.e{
-    width: 100%;
-    padding-left: 90px;
+table tr td{
+    margin-top: 20px;
 }

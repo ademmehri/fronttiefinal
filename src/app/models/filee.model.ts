@@ -1,8 +1,10 @@
 export class filee{
-idfile!:BigInteger
-taillefile!:String
-titlefile!:string
+    idfile!:bigint
+     titlefile!:string
 typefile!:string
+
+    taillefile!:string
+nomfichier!:string
 
     
    

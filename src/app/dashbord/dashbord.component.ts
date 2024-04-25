@@ -9,13 +9,22 @@ import { listemps } from '../models/listemps.model';
   styleUrls: ['./dashbord.component.css']
 })
 export class DashbordComponent {
-  emps!:listemps[]
+  emps!:employee[]
+  emp!:employee[]
+  emprcafe!:employee[]
+  emprrest!:employee[]
+  emprhotel!:employee[]
   constructor(private userservice:UserService){
-    this.userservice.getallemployee().subscribe(
-      res=>{
-        this.emps=res
-      }
-    )
+this.userservice.getemployees().subscribe(
+  res=>{
+    this.emps=res
+    console.log(this.emps)
+    this.emp=this.emps.filter((e:employee)=> e.roles[0].role==='ENTR')
+    this.emprcafe=this.emps.filter((e:employee)=> e.specialite==='cafe')
+    this.emprrest=this.emps.filter((e:employee)=> e.specialite==='Restaurant')
+    this.emprhotel=this.emps.filter((e:employee)=> e.specialite==='Hotel')
+  }
+)
     
   }
 }

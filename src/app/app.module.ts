@@ -29,6 +29,15 @@ import { NextformComponent } from './nextform/nextform.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { PageoffreemployeurComponent } from './pageoffreemployeur/pageoffreemployeur.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import { UpdatepasswordComponent } from './updatepassword/updatepassword.component';
+import { SouspackrestaurationComponent } from './souspackrestauration/souspackrestauration.component';
+import { ProfilemployeurComponent } from './profilemployeur/profilemployeur.component';
+import { ProposComponent } from './propos/propos.component';
+import { TestComponent } from './test/test.component';
+import { PacksupComponent } from './packsup/packsup.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { OffreajouterComponent } from './offreajouter/offreajouter.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -57,6 +66,13 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     NextformComponent,
     PageoffreemployeurComponent,
     DashbordComponent,
+    UpdatepasswordComponent,
+    SouspackrestaurationComponent,
+    ProfilemployeurComponent,
+    ProposComponent,
+    TestComponent,
+    PacksupComponent,
+    OffreajouterComponent,
 
   ],
   imports: [
@@ -65,7 +81,10 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    NgxPaginationModule,
+    RouterModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

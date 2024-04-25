@@ -1,13 +1,15 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>Inscription-TIEJOB</title>
+</head>
 <section>
-  
     <div class="form">
         <div class="donnee">
               <form [formGroup]="formsignin"  class="form">
              <div class="p1">
               <div class="img">
-                <img src="assets/log.png" alt="">
+                <img src="assets/log.png" alt="logo_TIEJOB">
               </div>
               <div class="titre">
                 <h2>Inscription Employeur</h2>
@@ -18,7 +20,7 @@
                 <div class="pp">
                   <div class="circle">
                   
-                    <img [src]="url"  alt="">
+                    <img [src]="url"  alt="image_user">
                   
                     </div>
                 
@@ -35,21 +37,21 @@
     <div class="deux">
       <div class="cinetnom">
         <div class="cin">
-          <label for="#">Spécialité</label>
+          <label for="#">Domaine<span>*</span></label>
           <div class="cont t" [style]="bsp">
             <i class='bx bxs-graduation'></i>
             <select   formControlName="sp">
-              <option value="">Spécialité</option>
-              <option value="cafe">café</option>
+              <option value="">Domaine</option>
+              <option value="cafe">Salon de thé</option>
               <option value="resturant">Resturant</option>
-              <option value="Hotel">Hotel</option>
+              <option value="Hotel">Hôtel</option>
              </select>
           </div>
           <p class="m">{{sp}}</p>
         </div>
        
         <div class="cin">
-          <label for="#">Nom entreprise</label>
+          <label for="#">Nom de l'entreprise<span>*</span></label>
           <div class="cont t" [style]="bnom">
             <i class='bx bx-user'></i>
             <input type="text" placeholder="Nom entreprise" formControlName="nom">
@@ -60,7 +62,7 @@
     </div>
     <div class="cinetnom">
       <div class="cin">
-        <label for="#">Numéro du téléphone</label>
+        <label for="#">Numéro du téléphone<span>*</span></label>
         <div class="cont t" [style]="bnumero">
           <i class='bx bxs-phone'></i>
           <input type="text" placeholder="numero" formControlName="numero">
@@ -68,47 +70,21 @@
         </div>
         <p class="m">{{numero}}</p>
       </div>
-     
       <div class="cin">
-        <label for="#">Gouvernerat</label>
+        <label for="#">Adresse<span>*</span></label>
         <div class="cont t" [style]="bgov">
-          <i class='bx bx-map-pin'></i>
-          <select   formControlName="gov" >
-            <option value="">Gouvernerat</option>
-            <option value="ariana">ariana</option>
-            <option value="ben aarous">ben aarous</option>
-            <option value="bizerte">bizerte</option>
-            <option value="Béja">Béja</option>
-            <option value="Gabès">Gabès</option>
-            <option value="Gafsa">Gafsa</option>
-            <option value="Jendouba">Jendouba</option>
-            <option value="Kairouan">Kairouan</option>
-            <option value="Kasserine">Kasserine</option>
-            <option value="Kébili">Kébili</option>
-            <option value="Le Kef">Le Kef</option>
-            <option value="Gafsa">Gafsa</option>
-            <option value="Mahdia">Mahdia</option>
-            <option value="La Manouba">La Manouba</option>
-            <option value="Médenine">Médenine</option>
-            <option value="Monastir">Monastir</option>
-            <option value="Nabeul">Nabeul</option>
-            <option value="Sfax">Sfax</option>
-            <option value="Sidi Bouzid">Sidi Bouzid</option>
-            <option value="Siliana">Siliana</option>
-            <option value="Sousse">Sousse</option>
-            <option value="Tozeur">Tozeur</option>
-            <option value="Tunis">Tunis</option>
-            <option value="Zaghouan">Zaghouan</option>
-           
-           </select>
+          <i class='bx bx-buildings' ></i>
+          <input type="text" placeholder="Adresse" formControlName="gov">
+         
         </div>
         <p class="m">{{gov}}</p>
       </div>
+ 
      
   </div>
     </div>
             <div class="email">
-              <label for="#">Adresse email</label>
+              <label for="#">Adresse e-mail<span>*</span></label>
               <div class="cont d" [style]="bemail">
                 <i class='bx bx-envelope'></i>
                 <input type="text" placeholder="Email" formControlName="email">
@@ -117,7 +93,7 @@
             </div>
           
             <div class="email">
-              <label for="#">Mot de passe</label>
+              <label for="#">Mot de passe<span>*</span></label>
               <div class="cont d" [style]="bmp">
                 <i class='bx bx-lock-alt'></i>
                 <input type="password" placeholder="+6 caractere" formControlName="mp">
@@ -140,6 +116,6 @@
        
     </div>
 <div class="p2">
-  <img src="assets/empr.png" alt="">
+  <img src="assets/empr.png" alt="image_employeur">
 </div>
 </section>

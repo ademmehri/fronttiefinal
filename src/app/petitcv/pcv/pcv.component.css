@@ -11,6 +11,10 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   background-image: url('/assets/mob.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+   background-size: cover; /* Pour s'assurer que l'image couvre toute la div */
+   background-repeat: no-repeat; /* Pour éviter que l'image ne se répète */
+   background-position: center; /* Pour centrer l'image */
 }
 .pp1{
     background-color: #F8F8FE;
@@ -41,20 +45,19 @@ h1{
 }
 .right{
     width: 688px;
-    min-height: 821px;
     box-shadow: 0 0 10px rgba(1, 1,1, 15%);
     margin-top: 20px;
     margin-bottom: 20px;
 border-radius: 87px;
-background-color: #fbfbfb;
+background-color: #fff;
 padding: 10px;
+height: auto;
 }
 .head{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    width: 100%;
-    
+    width: 90%;
 
 }
 .image{
@@ -76,12 +79,13 @@ border-radius: 50%;
 
 }
 .titre1{
-    color: #16171C;
+    color: #2772D6;
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
     padding-right: 30px;
     padding-top: 15px;
+    font-weight: 600;
 }
 .titre2{
     color:#2772D6;
@@ -145,12 +149,11 @@ textarea{
         justify-content: space-between;
     }
     .cv{
-   width: 120px;
+   width: 150px;
    height: 32px;
    border-radius: 20px;
    background-color: #2772D6;
-       
-  
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -165,8 +168,12 @@ textarea{
     .inputfield i{
         padding-top: 15px;
     }
-    .b{
-        margin-left: 300px;
+    .bb{
+      
+       width: 90%;
+       display: flex;
+       align-items: end;
+       justify-content: end;
     }
   
     .circle{
@@ -174,266 +181,141 @@ textarea{
         width: 160px;
         height: 150px;
         border-radius: 50%;
-
     }
-
-  @media screen and (max-width:680px) {
-    .pcv{
-        min-height: 100vh;
-         width: 100%;
-         display: flex;
-         margin-left: 5px;
-         padding-left: 5px;
-         justify-content:center;
-         align-items: center;
-     }
-     .right{
-         width: 100%;
-         min-height: 90vh;
-         box-shadow: 0 0 10px rgba(1, 1,1, 15%);
-         margin-top: 10px;
-         margin-bottom: 20px;
-     
-     }
-     .head{
-         display: flex;
-         justify-content:space-between;
-         width: 80%;
-     }
-     .image{
-         display: flex;
-     }
-     .image img{
-         height: 140px;
-         width: 150px;
-     
-     border-radius: 50%;
-     
-     }
-     
-     .titre1{
-         margin-top: 50px;
-         margin-right: 250px;
-         color: #3a6cf4;
-         font-weight: 500;
-         padding: 10px;
-         font-size: 1rem;
-     }
-     .titre2{
-         color: #3a6cf4;
-         padding-left: 20px;
-         font-weight: 500;
-         font-size: 1rem;
-     }
-     .inputfield{
-         display: flex;
-         justify-content: space-between;
-     align-items: center;
-     width:10px;
-        
-     }
-     .inputfield i{
-     padding-left: 20px;
-     }
-     .inputfield p{
-       padding-top: 28px;
-     }
-     p{
+    .contact{
+        margin-top: 40px;
+    }
+    table{
+        margin-left: 20px;
+    }
+    table tr .ic{
       
-         padding-left: 20px;
-     }
-     textarea{
-         background-color: #f0f0f0;
-         border-radius: 10px;
-         padding: 5px;
-         border: none;
-         font-weight: 600;
-         font-size: 1rem;
-         color: #333;
-         margin-left: 20px;
-         margin-top: 10px;
-         
-         }
-         .btn{
-             width: 150px;
-             height: 49px;
-             border: none;
-             outline: none;
-             border-radius: 49px;
-             cursor: pointer;
-             background-color: #5995fd;
-             color: #fff;
-             text-transform: uppercase;
-             font-weight: 600;
-             margin-top: 5px;
-             margin-bottom: 50px;
-             
-             transition: .5s;
-         }
-         .btn:hover{
-             background-color: #4d84e2;
-         }
-         .re{
-             display: flex;
-             justify-content: space-between;
-         }
-         .cv{
-        width: 100%;
-             margin-top: 5px;
-           padding-left: 5px;
-             line-height: 1;
-             padding-left: 20px;
-             padding-bottom: 20px;
-         }
-         .inputfield i{
-             padding-top: 15px;
-         }
-         .b{
-             margin-left: 5px;
-         }
-       
-         .circle{
-        margin: 10px;
-             width: 160px;
-             height: 150px;
-             border-radius: 50%;
-     
-         }
-       .c{
-padding-left: 10px;
-     padding-bottom: 20px;
-         font-weight: 700;
-         font-size: 1em;
-       }
+    }
+    table tr td i{
+        font-size: 18px;
+    }
+    table tr td p{
+        margin: 0px;
+        padding: 0px;
+        margin-left: 20px;
+      margin-bottom: 5px;
+    }
+    .ti{
+        font-weight: 600;
+    }
+    .btt{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        width: 90%;
+    }
+    .b{
+        width: 150px;
+        height: 50px;
+        background-color: #2772D6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 1s ease;
+    }
+    .an{
+        width: 150px;
+        height: 50px;
+        background-color: #EDEDED;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 20px; 
+        cursor: pointer;
+    
+    }
+    .b:hover{
+    background-color: #3a6cf4e9;
+    }
+    .b a{
+        color: #fff;
+    }
+  @media screen and (max-width:600px) {
+ .pcv{
+    flex-direction: column;
+    margin-top: 100px;
+ }
+ .pp1{
+    clip-path: none;
+    width: 100%;
+    height: 100px;
+ }
+.right{
+    width: 98%;
+}
+.circle{
+  
+    width: 100px;
+    height: 100px;
+}
+.image img{
+    width: 100px;
+    height: 100px;
+}
+.pp1 h1{
+   font-size: 25px;
+ }
+ .pp1 .sp1{
+    font-size: 25px;
+ }
+ .btn{
+    width: 100px;
+    height: 40px;
+ 
     
 }
-@media screen and (min-width:679px) and (max-width:920px) {
-    .pcv{
-        min-height: 100vh;
-         width: 100%;
-         display: flex;
-    height: 100%;
-         justify-content:center;
-         align-items: center;
-         margin-left: 10px;
-         padding-left: 10px;
-     }
-     .right{
-         width: 90%;
-         min-height: 90vh;
-         box-shadow: 0 0 10px rgba(1, 1,1, 15%);
-         margin-top: 10px;
-         margin-bottom: 20px;
-     height: auto;
-
-     }
-     .head{
-         display: flex;
-         justify-content:space-between;
-         width: 80%;
-     }
-     .image{
-         display: flex;
-     }
-     .image img{
-         height: 140px;
-         width: 150px;
-     
-     border-radius: 50%;
-     
-     }
-     
-     .titre1{
-         margin-top: 50px;
-         margin-right: 250px;
-         color: #3a6cf4;
-         font-weight: 500;
-         padding: 10px;
-         font-size: 2rem;
-     }
-     .titre2{
-         color: #3a6cf4;
-         padding-left: 20px;
-         font-weight: 500;
-         font-size: 2rem;
-     }
-     .inputfield{
-         display: flex;
-         justify-content: space-between;
-     align-items: center;
-     width:10px;
+    
+}
+@media screen and (min-width:601px) and (max-width:1024px) {
+    .right{
+        width: 70%;
         
-     }
-     .inputfield i{
-     padding-left: 20px;
-     }
-     .inputfield p{
-       padding-top: 28px;
-     }
-     p{
-      
-         padding-left: 20px;
-     }
-     textarea{
-         background-color: #f0f0f0;
-         border-radius: 10px;
-         padding: 5px;
-         border: none;
-         font-weight: 600;
-         font-size: 1rem;
-         color: #333;
-         margin-left: 20px;
-         margin-top: 10px;
-         
-         }
-         .btn{
-             width: 150px;
-             height: 49px;
-             border: none;
-             outline: none;
-             border-radius: 49px;
-             cursor: pointer;
-             background-color: #5995fd;
-             color: #fff;
-             text-transform: uppercase;
-             font-weight: 600;
-             margin-top: 5px;
-             margin-bottom: 50px;
-             
-             transition: .5s;
-         }
-         .btn:hover{
-             background-color: #4d84e2;
-         }
-         .re{
-             display: flex;
-             justify-content: space-between;
-         }
-         .cv{
-        width: 100%;
-             margin-top: 5px;
-           padding-left: 20px;
-             line-height: 1;
-             padding-bottom: 20px;
-         }
-         .inputfield i{
-             padding-top: 15px;
-         }
-         .b{
-             margin-left: 5px;
-         }
+    }
+    .pp1{
        
-         .circle{
-        margin: 10px;
-             width: 160px;
-             height: 150px;
-             border-radius: 50%;
-     
-         }
-       .c{
-padding-left: 10px;
-     
-         font-weight: 700;
-         font-size: 1em;
-       }
+        width: 100%;
+        height: 100px;
+     }
+     .pp1 h1{
+        font-size: 25px;
+      }
+      .pp1 .sp1{
+         font-size: 25px;
+      }
+      .pcv{
+        min-height: 100%;
+        margin-top: 100px;
+      }
+}
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    .right{
+        width: 50%;
+        
+    }
+    .pp1{
+       
+        width: 100%;
+        height: 100px;
+     }
+     .pp1 h1{
+        font-size: 30px;
+      }
+      .pp1 .sp1{
+         font-size: 30px;
+      }
+      .pcv{
+        min-height: 100%;
+        margin-top: 100px;
+      }
 }

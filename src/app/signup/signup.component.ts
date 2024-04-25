@@ -57,7 +57,7 @@ JSON: any;
    }
    else{
     this.bpassword="border: red 2px solid;"
-    this.password="champ invalide"
+    this.password="Le champ doit contenir des chiffres, des lettres minuscules et majuscules,  et être d'au moins 8 caractères de long"
    }
     if(this.formsignin.controls['email'].errors?.['email'] || this.formsignin.controls['email'].errors?.['required']){
       this.bemail="border: red 2px solid;"
@@ -81,7 +81,7 @@ if(this.formsignin.valid && this.verifierNom(this.formsignin.controls['nom'].val
   emp.num=this.formsignin.controls['numero'].value;
   emp.nom=this.formsignin.controls['nom'].value;
 emp.role="user";
-  emp.mail=this.formsignin.controls['email'].value
+  emp.email=this.formsignin.controls['email'].value
 emp.password=this.formsignin.controls['password'].value;
   console.log(emp);
   localStorage.setItem("emp",JSON.stringify(emp))

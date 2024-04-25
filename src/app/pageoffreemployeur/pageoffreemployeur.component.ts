@@ -14,9 +14,11 @@ export class PageoffreemployeurComponent {
   emp!:employee
   file!:filee
   cv!:filee
-  url!:string
+  url='assets/par2.png'
   cin!:string
+  desc=''
   constructor(private router:ActivatedRoute,private userservice:UserService,private route:Router){
+    this.desc=localStorage.getItem('desc')!
     this.router.params.subscribe(
       (param)=>{
         this.id=param['id']

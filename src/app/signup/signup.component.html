@@ -1,10 +1,13 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>Inscription-TIEJOB</title>
+</head>
 <section>
  <div class="pp1">
   <div class="p1">
     <div class="img">
-      <img src="assets/log.png" alt="">
+      <img src="assets/log.png" alt="logo_TIEJOB">
     </div>
    <div class="t">
     <h2>Inscription</h2>
@@ -14,7 +17,7 @@
   <form [formGroup]="formsignin">
   
    <div class="input" >
-     <p>Nom & Prénom</p>
+     <p>Nom & Prénom<span>*</span></p>
      <div class="i d" [style]="bnom">
        <i class='bx bx-user'></i>
        <input type="text" placeholder="Nom & prenom" formControlName="nom">
@@ -23,7 +26,7 @@
    <p class="err">{{nom}}</p>
    
     <div class="input" >
-     <p>Adresse email</p>
+     <p>Adresse e-mail<span>*</span></p>
      <div class="i d" [style]="bemail">
        <i class='bx bx-envelope'></i>
        <input type="text" placeholder="Entrer email" formControlName="email">
@@ -31,7 +34,7 @@
    </div>
    <p class="err">{{email}}</p>
 <div class="input" >
-  <p for="#">Numero</p>
+  <p for="#">Numero<span>*</span></p>
 <div class="i d" [style]="bnumero">
   <i class='bx bxs-phone'></i>
   <input placeholder="Numero" type="text" formControlName="numero" >
@@ -39,7 +42,7 @@
 </div>
 <p class="err">{{numero}}</p>
 <div class="input" >
-  <p for="#">Mot de passe</p>
+  <p for="#">Mot de passe<span>*</span></p>
 <div class="i d" [style]="bpassword">
   <i class='bx bx-lock-alt'></i>
   <input placeholder="mot de passe" type="password" formControlName="password" >
@@ -60,7 +63,7 @@
   </div>
  </div>
     <div class="p2">
- <img src="assets/S.png" alt="">
+ <img src="assets/sign.png" alt="image_employee">
     </div>
 
 </section>

@@ -23,16 +23,27 @@ import { UpdatepComponent } from './updatep/updatep.component';
 import { NextformComponent } from './nextform/nextform.component';
 import { PageoffreemployeurComponent } from './pageoffreemployeur/pageoffreemployeur.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import { UpdatepasswordComponent } from './updatepassword/updatepassword.component';
+import { SouspackrestaurationComponent } from './souspackrestauration/souspackrestauration.component';
+import { ProfilemployeurComponent } from './profilemployeur/profilemployeur.component';
+import { ProposComponent } from './propos/propos.component';
+import { TestComponent } from './test/test.component';
+import { PacksupComponent } from './packsup/packsup.component';
+import { OffreajouterComponent } from './offreajouter/offreajouter.component';
+import { AuthGuard } from './models/Auth.guard';
+
+
+
 
 
 const routes: Routes = [
+  {path:'pagepatron/:id',component:PagepatronComponent},
   {path:'login',component:LoginComponent},
   {path:'loginpatron',component:LoginpComponent},
   {path:'signup',component:SignupComponent},
   {path:'patron',component:Page1Component},
-  {path:'pagepatron/:id',component:PagepatronComponent},
   {path:'petitcv/:idempr/:idemp',component:PetitcvComponent},
-  {path:'pcv',component:PcvComponent},
+  {path:'pcv',component:PcvComponent,canActivate:[AuthGuard]},
   {path:'pageprincipale',component:PageprincipaleComponent},
   {path:'header',component:HeaderComponent},
   {path:'body',component:BodyComponent},
@@ -41,19 +52,22 @@ const routes: Routes = [
   {path:'signuppatron',component:SignuppComponent},
   {path:'profilemployee/:id',component:ProfilemployeeComponent},
   {path:'employee',component:EmployeeComponent},
-  {path:'profilpatron/:id',component:ProfilpatronComponent},
-  {path:'patronprofil',component:PatronprofilComponent},
+  {path:'profilpatron/:id',component:ProfilpatronComponent,canActivate:[AuthGuard]},
+  {path:'patronprofil',component:PatronprofilComponent,canActivate:[AuthGuard]},
   {path:'updatepatron/:id',component:UpdateComponent},
   {path:'packpayment/:id',component:PackpaymentComponent},
   {path:'dachbord',component:DashbordComponent},
   {path:'souspackpayment',component:SouspackComponent},
-  {path:'updateemp/:cin',component:UpdatepComponent},
+  {path:'updateemp/:id',component:UpdatepComponent},
   {path:'nextform',component:NextformComponent},
   {path:'pageoffreemployeur/:id',component:PageoffreemployeurComponent},
-
-  
-   
-
+  {path:'updatepass/:email',component:UpdatepasswordComponent,canActivate:[AuthGuard]},
+  {path:'spackrest',component:SouspackrestaurationComponent},
+  {path:'profilemployeur/:id',component:ProfilemployeurComponent,canActivate:[AuthGuard]},
+  {path:'propos',component:ProposComponent},
+  {path:'test',component:TestComponent},
+  {path:'packsup',component:PacksupComponent},
+  {path:'offreajouter/:id',component:OffreajouterComponent},
 ];
 
 @NgModule({

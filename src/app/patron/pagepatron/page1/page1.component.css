@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body{
+section{
     font-family: 'Poppins', sans-serif;
+    width: 100%;
+   height: 100%;
+  
 }
-
-
-
 .b{
     clip-path: polygon(100% 0, 93% 100%, 100% 100%, 0% 100%, 0% 0%);
     background-color: #F8F8FE;
@@ -29,8 +29,8 @@ span{
     color: #2772D6;
 }
 .navbar{
-width: 1000px;
-height: 80px;
+width:95%;
+height: 70px;
 border-radius: 53px;
 background-color: #fff;
 display: flex;
@@ -38,7 +38,13 @@ align-items: center;
 justify-content: center;
 margin-bottom: 50px;
 margin-top: 20px;
-
+padding-left: 50px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;   
 }
 .ba{
     margin-left: 5px;
@@ -56,13 +62,14 @@ margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 50px;
+    cursor: pointer;
 
 }
 .bt a{
     text-decoration: none;
     font-weight: 700;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 30px;
     color: #fff;
     text-align: center;
@@ -78,7 +85,7 @@ align-items: center;
 .navbar ul li{
 text-decoration: none;
 list-style: none;
-
+width: 300px;
 
 }
 .navbar div{
@@ -93,49 +100,45 @@ list-style: none;
     padding-right: 5px;
 }
 select{
-    width: 200px;
+    width: 100%;
     height: 40px;
     border: none;
   border-radius: 20px;
   padding: 10px;
-
-  
+color: #b7b7b7;
+  outline: none;
   font-weight: 300;
 }
 
-section{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-.employee{
-    width: 1300px;
-   min-height: 100vh;
-   height: auto;
- 
-    border-radius: 20px;
- 
-  display: inline-block;
-      justify-content: center;
-      align-items: center;
-  
 
+.employee{
+    width: 100%;
+ max-height: 100%;
+   
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+      margin-left: 0px;
+  margin-top: 20px;
+
+  
 }
 
 .card{
-    width: 250px;
-    height: 314px;
-    border-radius: 68px;
+    min-width: 250px;
+    min-height: 330px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(1, 1,1, 15%);
+    width: fit-content;
+    height: auto;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 .card img{
     width: 250px;
-    height: 213px;
-    border-radius: 68px;
+    height: 200px;
+    border-radius: 10px;
 }
 button{
     border: none;
@@ -156,6 +159,10 @@ button{
     width: 100%;
    
 }
+.bt i{
+    color: #fff;
+   padding-right: 10px;
+}
 .d2 p{
     font-weight:600;
     font-size: 15px;
@@ -169,33 +176,196 @@ button{
 .num{
     font-weight: 300;
     font-size: 15px;
-    line-height: 30px;
+text-align: center;
+  margin-top: 20px;
+}
+.info{
+   
+    height: 120px;
+}
+pagination-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-@media only screen and (max-width: 700px) {
+@media screen and (max-width:600px){
+    section{
+        margin-top: 100px;
+    }
     .titre h2{
         font-size: 25px;
     }
     .navbar{
-        display: block;
-   
+        display: flex;
+        align-items: start;
+        justify-content: start;
         height: 100%;
+        padding-left: 10px;
     }
     .navbar ul{
-        display: block;
+       flex-direction: column;
+        align-items: start;
+        justify-content: start;
     }
     .ba{
     display: none;
     background-color: #fff;
     }
+ 
+    .b{
+        clip-path: none;
+        flex-direction: column;
+   height: 50%;
+    }
+    .employee{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+   
+    }
+    .card{
+        width: auto;
+        margin-left: 0px;
+    }
+    ul li{
+       
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+       padding-left: 0px;
+       margin-left: 0px;
+    }
+    ul {
       
+    }
+    ul li select{
+        width: 100%;
+    }
+    .ba{
+     display: none;
+     background-color: aliceblue;
+     width: 0px;
+     height: 0px;
+
+    }
+   .bt{
+    margin-top: 25px;
+   }
+   ul li select{
+    width: 200px;
+    font-size: 14px;
+
+}
+.bt{
+    margin-left: 10px;
+}
+.card{
+    min-width: 200px;
+    min-height: 280px;
+ 
+}
+.card img{
+    width: 220px;
+    height: 150px;
+}
+  
+    
      }
-     @media only screen and (min-width: 700px) {
+     @media screen and (min-width:601px) and (max-width:1150px){
+        section{
+            margin-top: 100px;
+        }
+        .titre h2{
+            font-size: 30px;
+        }
       .b{
         clip-path: none;
       }
-          
-         }
+    ul{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .navbar{
+        height: 100%;
+        width: 500px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        padding-left: 10px;
+    }
+    .ba{
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+    ul li{
+        margin-bottom: 20px;
+        
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        
+    }
+    ul li select{
+        width: 350px;
     
+    }
+     .btt{
+      
+        display: flex;
+        align-items: end;
+        justify-content: end;
+       width: 400px;
+     }
+     .bt{
+        margin-left: 100px;
+     }
+     .employee{
+        display: flex;
+        flex-wrap: wrap;
+      
+        align-items: center;
+        justify-content: center;
+        
+     }
+     .card{
+        width: auto;
+        
+        margin-left: 20px;
+     }
+      
+        
+         }
+         @media screen and (min-width:1151px) and (max-width:1300px){
+         
+            .navbar{
+                width:90%;
+              padding-left: 10px;
+              margin-left: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        .navbar ul li{
+          
+         font-size: 15px;
+          width: 90%;
+          
+        }
+        .b{
+         clip-path: none;
+       
+        }
+        ul{
+            padding: 0px;
+        }
+  
+            
+             }
+    
+
    

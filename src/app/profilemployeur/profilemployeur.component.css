@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+.con{
+    width: 99.5%;
+    height: 100%;
+margin-left: 5px;
+margin-right: 5px;
+    font-family: 'Poppins', sans-serif;
+
+    padding-right: 5px;
+    background-image: url('/assets/mob.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    background-size: cover; /* Pour s'assurer que l'image couvre toute la div */
+    background-repeat: no-repeat; /* Pour éviter que l'image ne se répète */
+    background-position: center; /* Pour centrer l'image */
+}
+.pp1{
+    background-color: #F8F8FE;
+    height: 175px;
+   clip-path: polygon(100% 0, 93% 100%, 100% 100%, 0% 100%, 0% 0%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.sp1{
+    color: #2772D6;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    font-family: 'Poppins', sans-serif;
+}
+.donee{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 100%;
+
+}
+
+.sp2{
+    font-weight: 700;
+}
+.icon{
+    margin-right: 20px;
+    margin-top: 0px;
+
+}
+.icon i{
+    padding: 10px;
+    font-size: 1.3em;
+color: #2772D6;
+cursor: pointer;
+}
+.pen{
+    color: #000;
+}
+
+
+.profil{
+    width: 688px;
+   height: auto;
+  margin: 10px;
+  background-color: #fff;
+padding: 20px;
+border-radius: 87px;
+
+  box-shadow: 0 5px 25px rgba(1, 1,1, 15%);
+}
+.p{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.image{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.image img{
+   height: 150px; 
+width: 150px;
+border-radius: 50%;
+}
+.nom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.n p{
+    font-weight: bold;
+    font-size: 2em;
+    color: #3a6cf4;
+    padding: 10px;
+}
+.vcv p{
+    color: #3a6cf4;
+    border-bottom: 1px solid #3a6cf4;
+}
+.info{
+    padding: 10px;
+}
+.input label{
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 19px;
+}
+.input p{
+ padding-left: 10px;
+    font-weight: 300;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+.s{
+    color: #2772D6;
+}
+table{
+    padding: 10px;
+    width: 80%;
+}
+.t{
+padding: 5px;
+    font-weight: 600;
+
+}
+.offre{
+    height: auto;
+    width: 100%;
+   padding-bottom: 50px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.p3{
+margin-top: 30px;
+}
+
+.cadre{
+    width: 100%;
+    height: 86px;
+    border-radius: 16px;
+    background-color: #EDEDED;
+    padding: 10px;
+}
+.c{
+    background-color: #2772D6;
+}
+.cadre i{
+    font-size: 23px;
+    padding-right: 5px;
+}
+.cadre img{
+    width: 36px;
+    height: 35px;
+  margin-right: 10px;
+}
+.cadre p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.a{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.nom{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+.d{
+    display: flex;
+ 
+ 
+}
+.text{
+    position: absolute;
+    top: 40%;
+    background-color: #3a6cf4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition:opacity 0.5s ease;
+
+}
+.text::before{
+    content: "";
+    position: absolute;
+    border: 15px solid;
+    border-color: #3a6cf4 #0000 #0000 #0000;
+ top: 100%;
+}
+.c:hover .text{
+    top: -50%;
+    visibility: visible;
+    opacity: 1;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin: 5px;
+ border: none;
+}
+.btn button{
+    color: #fff;
+    padding: 5px;
+    border: none;
+    background-color: #3a6cf4;
+    transition: .5s;
+}
+.btn button:hover{
+    background-color: #4d84e2;  
+}
+.b{
+    text-decoration: none;
+    border: none;
+}
+.c{
+    border: none;
+ background: none;
+ display: inline-block;
+ justify-content: center;
+ align-items: center;
+ width: 80%;
+}
+table tr .g{
+    color: #919191;
+}
+.g{
+    color: #919191;
+}
+.aucun{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aucun i{
+    color: #91919124;
+    font-size: 100px;
+    text-align: center;
+}
+.msg p{
+font-size: 14px;
+color: #2772D6;
+}
+.i{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.donne{
+
+}
+.donee p{
+    font-size: 15px;
+  
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.head{
+
+    display: flex;
+align-items: center
+;
+
+}
+.deux{
+  
+    margin-left: 50px;
+}
+.deux .n{
+    font-weight: 600;
+    font-size: 25px;
+    color: #2772D6;
+}
+.deux .em{
+    font-size: 17px;
+    color: #787878;
+}
+.p2{
+   
+    padding-bottom: 50px;
+}
+table tr td{
+    padding-bottom: 10px;
+}
+
+@keyframes icon-animation {
+    0% {
+      transform: scale(1); /* Taille initiale de l'icône */
+    }
+    50% {
+      transform: scale(1.5); /* Taille de l'icône à mi-chemin de l'animation */
+    }
+    100% {
+      transform: scale(1); /* Taille finale de l'icône */
+    }
+  }
+  .fa {
+    animation: icon-animation 1s infinite; /* Appliquer l'animation à l'icône */
+    cursor: pointer;
+  }
+  .bx-exit{
+    cursor: pointer;
+  }
+@media screen and (max-width:680px) {
+.titre h1{
+    font-size: 18px;
+}
+.sp1{
+    font-size: 18px;
+}
+.donee{
+    width: 90%;
+}
+.donee p{
+    font-size: 14px;
+    text-align: center;
+}
+.image img{
+    width: 100px;
+    height: 100px;
+}
+.profil{
+    width: 100%;
+}
+.nom p{
+    font-size: 20px;
+}
+.aucun p{
+    text-align: center;
+}
+.head{
+   display: flex;
+    width: 100%;
+ 
+}
+.cadre{
+ height: auto;
+    width: 90%;
+}
+.offre{
+
+}
+.c{
+   
+    width: 100%;
+}
+.deux .em{
+    font-size: 14px;
+    color: #2772D6;
+}
+    
+}
+@media screen and (min-width:681px) and (max-width:1200px) {
+    .profil, .p3, .info {
+        min-height: 100%;
+    }
+    .donee{
+        width: 90%;
+        text-align: center;
+    }
+}

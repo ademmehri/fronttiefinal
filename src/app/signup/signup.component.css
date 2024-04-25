@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+title{
+    font-size: 30px;
+    font-weight: 600;
+}
 section{
     width: 100%;
     height: 100vh;
@@ -12,6 +16,10 @@ input:focus{
 .err{
     color: red;
     font-size: 15px;
+    width: 450px;
+}
+p span{
+    color: red;
 }
 a{
     cursor: pointer;
@@ -42,7 +50,6 @@ a{
 width: 50px;
 height: 4px;
 
-background-color:  #2772D6;
 }
 .img{
  width: 100%;
@@ -55,12 +62,16 @@ background-color:  #2772D6;
     height: 90px;
 }
 .p2{
-    width: 40%;
+    width: 50%;
     height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .p2 img{
     width: 100%;
-    height: 100%;
+    height: 95%;
+    border-radius: 10px;
 }
 .t{
     display: flex;
@@ -149,6 +160,7 @@ margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .bt a{
     font-weight: 400;
@@ -165,115 +177,159 @@ margin-top: 5px;
 }
 /* Media Query pour les écrans d'une largeur maximale de 768 pixels */
 @media screen and (max-width: 768px) {
-   .med{
-    display: flex;
+ section{
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-   }
-    .i {
-        width:250px;
-      }
-    .f1{
-        display: block;
-        
-    }
-    section{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .p1 {
-      width: 80%;
-    }
-    .pp1{
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-  
-    .p2 {
-      display: none;
-    }
-  
-    .t h2 {
-      font-size: 24px;
-      padding-top: 20px;
-    }
-    .img{
-        margin-top: 30px;
-    }
+ }
+ .pp1{
+    width: 90%;
+   margin-left: 20px;
+ }
+ .p2{
+    display: none;
+   
+ }
+.i{
+    width: 100%;
+}
+.med{
+    width: 100%;
+}
+form{
+    width: 100%;
+}
+.p1{
+    width: 80%;
+    
+}
   }
   
   /* Media Query pour les écrans d'une largeur comprise entre 769 et 1024 pixels */
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .med{
-        display: flex;
+  @media screen and (min-width: 769px) and (max-width: 1150px) {
+    section{
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-       }
-        .i {
-            width:500px;
-          }
-        .f1{
-            display: block;
-            
-        }
-        section{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .p1 {
-          width: 100%;
-        }
-        .pp1{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        min-height: 100%;
       
-        .p2 {
-          display: none;
-          width: 0;
-          height: 0;
-        }
-      
-        .t h2 {
-          font-size: 24px;
-          padding-top: 0px;
-        }
-        .img{
-            margin-top: 100px;
-        }
+     }
+     .pp1{
+        width: 90%;
+       margin-left: 20px;
+     }
+     .p2{
+        display: none;
+       
+     }
+    .i{
+        width: 100%;
+    }
+    .med{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+    .p1{
+        width: 60%;
+    }
+    .input p{
+        font-size: 20px;
+    }
+    .img img{
+        width: 250px;
+        height: 150px;
+    }
+    .t h2{
+        font-size: 40px;
+    }
+    .i{
+height: 50px;
+    }
+    .i input{
+        font-size: 20px;
+    }
+    .input p{
+        font-size: 20px;
+    }
+    .text p{
+        font-size: 20px;
+    }
+    .text a{
+        font-size: 20px;
+    }
+    .bt a{
+        font-size: 20px;
+    }
+    .b{
+        margin-top: 20px;
+    }
   }
   
   /* Media Query pour les écrans d'une largeur supérieure à 1024 pixels */
-  @media screen and (min-width: 1025px) {
-    .pp1 {
-      width: 50%;
-    }
+  @media screen and (min-width: 1025px) and (max-width: 1124px){
   
-    .p2 {
-      width: 40%;
+    section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     .pp1{
+        width: 90%;
+       margin-left: 20px;
+     }
+     .p2{
+        display: none;
+       
+     }
+    .i{
+        width: 100%;
     }
-  
-    .t h2 {
-      font-size: 30px;
-      padding-top: 40px;
+    .med{
+        width: 100%;
     }
-  
-    .i {
-      width: 207px;
+    form{
+        width: 100%;
     }
-  
-    .d {
-      width: 433px;
+    .p1{
+        width: 60%;
     }
-  
-    .bt {
-      width: 157px;
-      height: 53px;
+    .input p{
+        font-size: 20px;
+    }
+    .img img{
+        width: 250px;
+        height: 150px;
+    }
+    .t h2{
+        font-size: 40px;
+    }
+    .i{
+height: 60px;
+    }
+    .i input{
+        font-size: 25px;
+    }
+    .i i{
+        font-size: 25px;
+    }
+    .input p{
+        font-size: 25px;
+    }
+    .text p{
+        font-size: 25px;
+    }
+    .text a{
+        font-size: 20px;
+    }
+    .bt a{
+        font-size: 25px;
+    }
+    .b{
+        margin-top: 20px;
+    }
+    .input{
+        margin-bottom: 40px;
     }
   }

@@ -1,8 +1,11 @@
 <app-header></app-header>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>TIEJOB</title>
+</head>
 <section>
     <div class="p1">
 <div>
@@ -19,27 +22,29 @@
     <div class="p2">
 
     <div class="form">
-       <div>
+       <div class="f">
         <div class="head">
        
             <div class="circle">
                 
-                <img [src]="url"  alt="">
+                <img [src]="url"  alt="image_user">
                 
                 </div>
               
            <div class="upload">
+          
             <p class="nom">{{empl.nom}}</p>
-            <p class="mail">{{empl.mail}}</p>
+           
+            <p class="mail">{{empl.email}}</p>
             <input name="file" id="file" class="inputfile"  type="file" (change)="onselectfile($event)"/>
-            <label for="file"><i class='bx bx-upload'></i> Choisie une image</label>
+            <label for="file"><i class='bx bx-upload'></i>Choisis une image</label>
            </div>
         </div>
         <p class="m">{{timg}}</p>
         <body>
             <form [formGroup]="formsignin">
             <div class="region">
-                <label for="#">Date de Naisance</label>
+                <label for="#">Date de Naisance<span>*</span></label>
              <div class="cont" [style]="bdate">
                 <i class='bx bx-calendar'></i>
                 <input placeholder="date" type="date" (change)="onselecte($event)"  formControlName="date" >
@@ -47,7 +52,7 @@
              <p class="m">{{date}}</p>
             </div>
             <div class="region">
-                <label for="#">Gouvernerat</label>
+                <label for="#">Gouvernorat<span>*</span></label>
              <div class="cont" [style]="bgov">
                 <i class='bx bx-map-pin'></i>
                 <select  name="select" formControlName="gov">
@@ -82,7 +87,7 @@
             <p class="m">{{gov}}</p>
             </div>
             <div class="region">
-                <label for="#">Région</label>
+                <label for="#">Ville<span>*</span></label>
              <div class="cont" [style]="breg">
                 <i class='bx bx-map' ></i>
                 <input placeholder="Région" type="text" formControlName="region" >
@@ -90,19 +95,26 @@
              <p class="m">{{reg}}</p>
             </div>
             <div class="region">
-              
-              <label for="#">Spécialité</label>
-           <div class="cont" [style]="bsp">
-            <i class='bx bx-briefcase'></i>
-              <select  name="select" formControlName="sp" >
-                  <option value="Cuisinier">Cuisinier</option>
-                  <option value="Serveur">Serveur</option>
-                 </select>
+              <label for="#">Spécialité<span>*</span></label>
+           <div class="wrapper">
+            <div class="search-input">
+              <div class="cont" [style]="bsp" >
+            <i class='bx bxs-graduation'></i> <input type="text"  (keyup)="onKeyUp($event)" formControlName="sp"  placeholder="Spécialité">
+              </div>
+              <div class="autocom-box" (mouseleave)="showlist=false"  *ngIf="showlist">
+                 <div *ngIf="listfinal">
+                  <li (click)="clickli(e)"   *ngFor="let e of listfinal">{{e}}</li>
+                 </div>
+                 <div *ngIf="input">
+                  <li>{{input}}</li>
+                 </div>
+              </div>
+            </div>
            </div>
           <p class="m">{{sp}}</p>
           </div>
             <div class="region">
-                <label for="#">Experience</label>
+                <label for="#">Expérience<span>*</span></label>
              <div class="con">
                <textarea name="x"  [style]="bexp" id="" cols="60" placeholder="Experience" rows="10" formControlName="exp"></textarea>
              </div>
@@ -110,20 +122,19 @@
             </div>
           
             <div class="region">
-                <label for="#">Gender</label>
+                <label for="#">Sexe<span>*</span></label>
              <div class="rad">
-               <input type="radio" name="rad" checked formControlName="rad1" value="Homme"> <span>Homme</span>&nbsp;&nbsp;&nbsp;
-               <input type="radio" name="rad" formControlName="rad1" value="Femme"> <span>Femme</span>
+               <input type="radio"  checked formControlName="rad1" value="Homme"> <span>Homme</span>&nbsp;&nbsp;&nbsp;
+               <input type="radio"  formControlName="rad1" value="Femme"> <span>Femme</span>
              </div>
             </div>
             <p class="m">{{sexe}}</p>
             <div class="region">
-              <label for="#">Etat</label>
+              <label for="#">Etat<span>*</span></label>
            <div class="rad">
-             <input type="radio" name="rad2"  formControlName="rad2" value="Stagiere"> <span>Stagiere</span>&nbsp;&nbsp;&nbsp;
-             <input type="radio" name="rad2" formControlName="rad2" value="Employee"> <span>Employee</span>
+             <input type="radio"   formControlName="rad2" value="Stagiere"> <span>Stagiaire</span>&nbsp;&nbsp;&nbsp;
+             <input type="radio"  formControlName="rad2" value="Employee"> <span>Employé</span>
             </div>
-           
                   </div>
                   <p class="m">{{etat}}</p>
                   <div class="mb-3">

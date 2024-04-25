@@ -4,6 +4,8 @@ section{
     height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-serif;
+
+  
 }
 .p1{
     background-color: #F8F8FE;
@@ -20,14 +22,14 @@ section{
 }
 h1{
     font-weight: 700;
-    font-size: 45px;
+    font-size: 35px;
     line-height: 54px;
     font-family: 'Poppins', sans-serif;
 }
 .sp1{
     color: #2772D6;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 35px;
     line-height: 54px;
     font-family: 'Poppins', sans-serif;
 }
@@ -62,8 +64,11 @@ h1{
     width: 140px;
     height: 140px;
     border-radius: 50%;
-border: #3a6cf4 1px solid;
-margin: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+
 }
 .upload{
     color: #3a6cf4;
@@ -93,7 +98,7 @@ margin: 20px;
 }
 .head{
     display: flex;
-    
+   
 }
 .form{
     width: 40%;
@@ -106,6 +111,7 @@ margin: 20px;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
+ 
 }
 
 .p2{
@@ -114,7 +120,10 @@ margin: 20px;
     display: flex;
 align-items: center;
     justify-content:center;
-    background-color: #fff;
+    background-image: url('/assets/mob.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    background-size: cover; /* Pour s'assurer que l'image couvre toute la div */
+    background-repeat: no-repeat; /* Pour éviter que l'image ne se répète */
+    background-position: center; /* Pour centrer l'image */
    
 }
 .nom{
@@ -228,6 +237,55 @@ span{
     padding-bottom: 10px;
     padding-right: 10px;
 }
+.wrapper .search-input{
+    background-color: #fff;
+    width: 85%;
+   
+    border-radius: 15px;
+}
+.search-input input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #EDEDED;
+    border-radius: 15px;
+    padding: 10px;
+}
+.autocom-box{
+    padding: 10px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(1, 1,1, 15%);
+border-radius: 10px;
+font-size: 14px;
+}
+.autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px; 
+   color: #2772D6;
+   font-weight: 600;
+    
+}
+.search-input i{
+    padding-left: 10px;
+    padding-right: 0px;
+}
+select{
+    outline: none;
+}
+textarea{
+    outline: none;
+}
+.autocom-box li:hover{
+    background-color: #efefef;
+}
+label span{
+    color: red;
+}
 @media screen and (max-width:680px) {
     body{
         width: 100%;
@@ -239,22 +297,22 @@ span{
     }
     h1{
         font-weight: 700;
-        font-size: 30px;
+        font-size: 25px;
         line-height: 54px;
         font-family: 'Poppins', sans-serif;
     }
     .sp1{
-        font-size: 30px;
+        font-size: 25px;
     }
     .donne{
         padding-left: 10px;
     }
+  
     p{
         font-weight: 400;
         font-size: 15px;
         line-height: 20px;
         letter-spacing: 0.3px;
-    
     }
     .sp2{
         font-size: 15px;
@@ -266,186 +324,191 @@ span{
     width: 100%;
 margin: 10px;
 padding: 10px;
+flex-direction: column;
 }
 .cont{
-   
-    width: 333px;
+    width:100%;
     height: 42px;
- 
+}
+.head{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.upload p{
+    text-align: center;
+}
+.upload label{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.wrapper .search-input{
+    width: 100%;
+   
+}
+.search-input input{
+    width: 100%;
+}
+.wrapper{
+    width: 100%;
+}
+.con textarea{
+width: 100%;
+}
+.b{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.donee{
+    width: 90%;
+}
+.donee p{
+font-size: 13px;
+text-align: center;
+}
+section{
+    margin-top: 100px;
+    
+    }
+    .p1{
+        clip-path: none;
+    }
+}
+@media screen and (min-width:681px) and (max-width:900px) {
+.head{
+    width: 100%;
 
 }
+body{
+    width: 100%;
+  
 }
-@media screen and (min-width:961px) and (max-width:1024px) {
 .form{
     width: 90%;
 }
+.f{
+  
+    width: 80%;
 }
-@media screen and (min-width:679px) and (max-width:960px) {
-    section{
-        height: 100%;
-        width: 100%;
-     
+.cont{
+    width: 100%;
+}
+.wrapper .search-input{
+    width: 100%;
+   
+}
+.search-input input{
+    width: 100%;
+}
+.wrapper{
+    width: 100%;
+}
+.con textarea{
+width: 100%;
+}
+.mb-3{
+    width: 100%;
+}
+.donee{
+    width: 90%;
+   
+}
+.donee p{
+    text-align: center;
+    padding-left: 20px;
+}
+section{
+margin-top: 100px;
+}
+}
+@media screen and (min-width: 900px) and (max-width: 1000px){
+  .f{
+    width: 100%;
+  }
+  section{
+    margin-top: 100px;
     }
-    .titre{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .donee{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    padding: 20px;
-    }
-    .donne p{
-        font-weight: 500;
-    }
-    .p2{
-        height: 100%;
-        width: 100%;
-    }
-    .circle img{
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-    }
-    .circle{
-        background-color: #f0f0f0;
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-    border: #3a6cf4 1px solid;
-    margin: 20px;
-    }
-    .upload{
-        color: #3a6cf4;
-        margin-top: 40px;
-    
-    }
-    .inputfile + label {
-        cursor: pointer; /* "hand" cursor */
-    }
-    .inputfile:focus + label {
-        outline: 1px dotted #000;
-        outline: -webkit-focus-ring-color auto 5px;
-    }
-    .inputfile {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
-    }
-    .inputfile + label {
-        font-size: 1em;
-        font-weight: 500;
-       
-        display: inline-block;
-    }
-    .head{
-        display: flex;
-        
-    }
-    .form{
-        width: 100%;
-        min-height: 90vh;
-        box-shadow: 0 0 10px rgba(1, 1,1, 15%);
-        margin-top: 10px;
-        margin-bottom: 20px;
-        background-color: white;
+  .form{
+    width: 65%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-left: 20px;
+padding-right: 20px;
 
-    }
-    .p2{
-        margin: 10px;
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
-    justify-content: left;
-        background-color: rgba(206, 205, 205, 0.15);
-    }
-    .nom{
-        color: #000;
-        font-weight: 500;
-        font-size: 20px;
-    }
-    .mail{
-        font-weight: 100;
-        color: #000;
-        font-size: 20px;
-    }
-    .region label{
-        color: #000;
-        font-weight: 500;
-        padding-left: 30px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 10px;
+  }
+  .cont{
+    width: 100%;
+}
+.wrapper .search-input{
+    width: 100%;
+   
+}
+.search-input input{
+    width: 100%;
+}
+.wrapper{
+    width: 100%;
+}
+.con textarea{
+width: 100%;
+}
+.donee{
+    width: 90%;
+}
+.donee p{
+    text-align: center;
+    padding-left: 20px;
+}
+section{
+    margin-top: 100px;
+    
     }
  
-    .cont select{
-        width: 90%;
-        height: 40px;
-        padding: 10px;
-        border: 1px solid #f8f8f2;
-        border-radius: 5px ;
-        background-color: #f1f1ec;
+  }
+  @media screen and (min-width: 1001px) and (max-width: 1150px){
+    .f{
+      width: 100%;
     }
-    .cont textarea{
-        width: 90%;
-        height: 80px;
-        padding: 10px;
-        border: 1px solid #f8f8f2;
-        border-radius: 5px ;
-        background-color: #f1f1ec;
-    
+    .form{
+      width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
     }
-    .rad{
-        padding-left: 30px;
-        margin-bottom: 10px;
-        height: 40px;
-    }
-    .rad input{
+    .cont{
+      width: 100%;
+  }
+  .wrapper .search-input{
+      width: 100%;
      
-        font-size: 20px;
-    }
-    span{
-        padding-left: 5px;
-        font-size: 17px;
-    }
-    .btn{
-        margin-left: 20px;
-        margin-bottom: 60px;
-    }
-    .btn button{
-        border: none;
-        background-color: #3a6cf4;
-        color: #f8f8f2;
-        width: 100%;
-        height: 50px;
-        padding: 10px;
-        border-radius: 10px;
-        font-weight: 500;
-    }
-    .m{
-        color: red;
-        padding-left: 30px;
-    }
-    .form-control{
-        width: 90%;
-        background-color: #f1f1ec;
-    }
-    .mb-3{
-        padding-left: 30px;
-    }
-    .form-label{
-        color: #000;
-        font-weight: 500;
+  }
+  .search-input input{
+      width: 100%;
+  }
+  .wrapper{
+      width: 100%;
+  }
+  .con textarea{
+  width: 100%;
+  }
+  .donee{
+      width: 90%;
+  }
+  .donee p{
+      text-align: center;
+      padding-left: 20px;
+  }
+  section{
+    margin-top: 100px;
     
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 10px;
     }
    
-    
-}
+    }

@@ -1,118 +1,155 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<section>
-    <div class="image">
-        <img class="im" src="assets/patron.png" alt="">
-    </div>
-    <div class="form">
-      <div class="titre">
-        <h1> </h1>
-      </div>
-      
-
-    
-        <div class="donnee">
-              <form [formGroup]="formsignin"  class="form">
-             <div class="p1">
-              <div class="head">
-    
-                <div class="pp">
-                  <div class="circle">
-                  
-                    <img [src]="url"  alt="">
-                  
-                    </div>
-                
-                </div>
-                  
-               <div class="upload">
-              
-                <input name="file" id="file" class="inputfile"  type="file" (change)="onselectfile($event)"/>
-                <label for="file" class="file"><i class='bx bx-upload'></i> Modifier votre image</label>
-               </div>
-                 </div>
-    <div class="deux">
-
-    <div class="cinetnom">
-      <div class="cin">
-        <label for="#">Région</label>
-        <div class="">
-          <input type="text" placeholder="Région" formControlName="region">
-        </div>
-        <p class="m">{{result2}}</p>
-      </div>
-     
-      <div class="cin">
-        <label for="#">Gouvernerat</label>
+<app-header></app-header>
+<div class="con">
+    <div class="pp1">
         <div>
-          <select   (change)="onselect($event)">
-            <option value="ariana">Choisir votre gouvernerat </option>
-            <option value="ariana">ariana</option>
-            <option value="ben aarous">ben aarous</option>
-            <option value="bizerte">bizerte</option>
-            <option value="Béja">Béja</option>
-            <option value="Gabès">Gabès</option>
-            <option value="Gafsa">Gafsa</option>
-            <option value="Jendouba">Jendouba</option>
-            <option value="Kairouan">Kairouan</option>
-            <option value="Kasserine">Kasserine</option>
-            <option value="Kébili">Kébili</option>
-            <option value="Le Kef">Le Kef</option>
-            <option value="Gafsa">Gafsa</option>
-            <option value="Mahdia">Mahdia</option>
-            <option value="La Manouba">La Manouba</option>
-            <option value="Médenine">Médenine</option>
-            <option value="Monastir">Monastir</option>
-            <option value="Nabeul">Nabeul</option>
-            <option value="Sfax">Sfax</option>
-            <option value="Sidi Bouzid">Sidi Bouzid</option>
-            <option value="Siliana">Siliana</option>
-            <option value="Sousse">Sousse</option>
-            <option value="Tozeur">Tozeur</option>
-            <option value="Tunis">Tunis</option>
-            <option value="Zaghouan">Zaghouan</option>
-           
-           </select>
+            <div class="titre">
+                <h1>
+                    Détails <span class="sp1">personnel</span> </h1>
+                        </div>
+                        <div class="donee">
+                            <p>Bienvenue sur la page de mise à jour des détails personnels. Votre contribution à notre site est inestimable, et nous souhaitons nous assurer que toutes vos informations sont à jour dans nos dossiers.</p>
+                        </div>
+                
         </div>
-        <p class="m">{{result6}}</p>
-      </div>
-     
-  </div>
-    </div>
-    <div class="email">
-      <label for="#">Numero</label>
-      <div>
-        <input type="number" placeholder="Numero" formControlName="numero">
-      </div>
-      <p class="m">{{result5}}</p>
-    </div>
-            <div class="email">
-              <label for="#">Email</label>
-              <div>
-                <input type="text" placeholder="Email" formControlName="email">
-              </div>
-              <p class="m">{{result3}}</p>
             </div>
-          
-            <div class="email">
-              <label for="#">Nouveau Mot de passe</label>
-              <div>
-                <input type="password" placeholder="+6 caractere" formControlName="mp">
-              </div>
+   <div class="p">
+    <div class="profil" >
+        <div class="head">
+            <div class="image" (click)="selctimg()">
+                <img [src]="url" alt=""  (mouseenter)="afficherTexte = true" (mouseleave)="afficherTexte = false">
+                <div *ngIf="afficherTexte" class="overlay">
+                  <p>changez vos photo</p>
+                </div>
             </div>
-<p class="m">{{result4}}</p>
-<div class="mb-3">
-  <label for="formFile" class="form-label">Modifier votre CV</label>
-  <input class="form-control" type="file" id="formFile" (change)="onselectcv($event)">
-</div>
-<div class="btn">
-  <button (click)="onsubmit()" >Modifier</button>
-</div>
-             </div>
-         
-              </form>
-          </div>
-         
-    </div>
+           
+            <div class="nom">
+               <div> <p>{{emp.nom}}</p> </div>
+            </div>
 
-</section>
+        </div>
+        <div class="info">
+            <div class="p1">
+                <div class="input">
+                    <label for="#">Email</label>
+                    <p class="g">{{emp.email}}</p>
+                </div>
+            </div>
+            <div class="p2">
+              <form  [formGroup]="formsignin">
+                <h2>Données <span class="s">Personnelles</span></h2>
+                <div class="donnee">
+                    <table>
+                        <tr >
+                            <td class="t">Nom</td>
+                            <td class="g"><input type="text" [style]="bnpm" formControlName="nom"></td>
+                        </tr>
+                        <tr>
+                          <td class="t">Email</td>
+                          <td class="g"><input type="text" formControlName="email" [style]="bemail"></td>
+                      </tr>
+                        <tr>
+                            <td class="t">Date de naissance</td>
+                            <td class="g"><input type="date" formControlName="date"></td>
+                        </tr>
+                        <tr>
+                          <td class="t">téléphone</td>
+                          <td class="g"><input type="text" formControlName="num" [style]="bnumero"></td>
+                        </tr>
+                        <tr>
+                            <td class="t r">Sexe</td>
+                            <td class="g r"><input type="radio" value="Homme" formControlName="rad"> Homme <input type="radio" value="Femme" formControlName="rad"> Femme</td>
+                        </tr>
+                        <tr>
+                          <td class="t r">Etat</td>
+                          <td class="g r"><input type="radio" value="Stagiere" formControlName="rad2"> Stagiere <input type="radio" value="Employee" formControlName="rad2"> Employee</td>
+                      </tr>
+                        <tr>
+                            <td class="t sp">Spécialité</td>
+                           <td class="g s"> 
+                            <div class="wrapper">
+                              <div class="search-input">
+                                <div class="cont">
+                              <input type="text" (keyup)="onKeyUp($event)" [style]="bsp"  formControlName="sp"  placeholder="Spécialité">
+                                </div>
+                                <div class="autocom-box" *ngIf="this.formsignin.controls['sp'].value!='' ">
+                                   <div *ngIf="listfinal">
+                                    <li (click)="clickli(e)"   *ngFor="let e of listfinal">{{e}}</li>
+                                   </div>
+                                   <div *ngIf="input">
+                                    <li>{{input}}</li>
+                                   </div>
+                                </div>
+                              
+                              </div>
+                             </div>
+
+                           </td>
+                        </tr>
+                        <tr>
+                            <td class="t">Expérience</td>
+                     <td class="g"><textarea [style]="bexp"  name="" id="" cols="30" rows="4" formControlName="exp"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="t">Région</td>
+                            <td class="g">
+                              <select  name="select" formControlName="gov" [style]="bgov">
+                                <option value="">Gouvernerat</option>
+                                <option value="ariana">ariana</option>
+                                <option value="ben aarous">ben aarous</option>
+                                <option value="bizerte">bizerte</option>
+                                <option value="Béja">Béja</option>
+                                <option value="Gabès">Gabès</option>
+                                <option value="Gafsa">Gafsa</option>
+                                <option value="Jendouba">Jendouba</option>
+                                <option value="Kairouan">Kairouan</option>
+                                <option value="Kasserine">Kasserine</option>
+                                <option value="Kébili">Kébili</option>
+                                <option value="Le Kef">Le Kef</option>
+                                <option value="Gafsa">Gafsa</option>
+                                <option value="Mahdia">Mahdia</option>
+                                <option value="La Manouba">La Manouba</option>
+                                <option value="Médenine">Médenine</option>
+                                <option value="Monastir">Monastir</option>
+                                <option value="Nabeul">Nabeul</option>
+                                <option value="Sfax">Sfax</option>
+                                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                <option value="Siliana">Siliana</option>
+                                <option value="Sousse">Sousse</option>
+                                <option value="Tozeur">Tozeur</option>
+                                <option value="Tunis">Tunis</option>
+                                <option value="Zaghouan">Zaghouan</option>
+                               </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t">City</td>
+                          <td class="g">  <input type="text" [style]="breg" formControlName="city"></td>
+                        </tr>
+                    <tr>
+                      <td class="t">Modifier CV</td>
+                      <td>
+                        <div class="mb-3">
+                          <input class="form-control" type="file" id="formFile" (change)="onselectcv($event)">
+                        </div>
+                      </td>
+                    </tr>
+                
+                    </table>
+                  
+                </div>
+              </form>
+            </div>
+            <div class="btt">
+              <div class="an" (click)="annuler()">
+                <a>Annuler</a>
+              </div>
+              <div class="b" (click)="modifier()">
+                <a>Enrigistrer</a>
+              </div>
+            </div>
+        </div>
+        </div>
+   </div>
+
+</div>
+<app-footer></app-footer>

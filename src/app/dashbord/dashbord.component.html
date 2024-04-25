@@ -1,24 +1,125 @@
-<app-header></app-header>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <section>
-    <div class="list">
-       <div class="e">
-        <div class="emp" *ngFor="let ent of emps">
-            <div class="img">
-                <img src="assets/{{ent.filee.titlefile}}" alt="">
+<div class="s">
+    <div class="p1 f">
+        <div class="img">
+            <img src="assets/log.png"  alt="">
+        </div>
+        <div class="con">
+        <div class="menu">
+            <div class="ic" >  
+                <i class='bx bx-edit'></i><p>Entreprise<p>
             </div>
-            <div class="text">
-        <div class="nom">
-            <p>{{ent.nom}}</p>
-        </div>
-        <div class="sp">
-            <p>{{ent.specialite}}</p>
-        </div>
-        <div class="sp">
-            <p>{{ent.role}}</p>
-        </div>
+            <div class="ic" >  
+                <i class='bx bx-edit'></i><p>Modifier Entreprise</p>
             </div>
+            <div class="ic" routerLink="/listoffre">
+                <i class='bx bx-user'></i><p>Candidats</p>
+            </div>
+            <div class="ic" routerLink="/acceuiltest">  
+                <i class='bx bx-book-open'></i><p>Testes</p>
+            </div>
+            <div class="ic" routerLink="/listoffre">  
+                <i class='bx bx-briefcase'></i><p>Offres</p>
+            </div>
+            <div class="ic">  
+                <i class='bx bx-briefcase-alt' ></i><p>Entretien</p>
+            </div>
+          
+          
         </div>
        
-       </div>
         </div>
-</section>
+            </div>
+            <div class="p2">
+                <div class="head">
+                   <div class="t">
+                   <h2>Tie Job</h2>
+                   </div>
+                   <div class="t2">
+                    <div class="rech">
+                        <i class='bx bx-search'></i><input type="text" placeholder="Rechercher">
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-envelope' ></i><i class='bx bxs-bell-ring'></i>
+                    </div>
+                 <div class="imgg">
+                    <img src="assets/mor.png" alt="">
+                 </div>
+                   </div>
+                </div>
+            <div class="a1">
+                <div class="car" *ngIf="emp">
+                    <h3>Candidat</h3>
+                    <p>{{emp.length}}</p>
+                   </div>
+                <div class="car" *ngIf="emprcafe">
+                 <h3>Salon de Thé</h3>
+                 <p>{{emprcafe.length}}</p>
+                </div>
+                <div class="car" *ngIf="emprrest">
+                    <h3>Restaurant</h3>
+                    <p>{{emprrest.length}}</p>
+                   </div>
+                   <div class="car" *ngIf="emprhotel">
+                    <h3>Hotel</h3>
+                    <p>{{emprhotel.length}}</p>
+                   </div>
+            </div>
+            <div class="a2">
+                <div class="aa1">
+                    <div class="tt">
+                        <p>Utilisateur(5)</p>
+                        <select>
+                            <option>Serveur</option>
+                            <option> chef
+                            </option>
+                        </select>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>image</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Numero</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="imgg"><img src="assets/mor.png"></div></td>
+                                <td>Adem mehri</td>
+                                <td>mehriadem309@gmail.com</td>
+                                <td>24 480 550</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="aa1">
+                    <div class="tt">
+                        <p>Employeur(5)</p>
+                        <select>
+                            <option>Hotel</option>
+                            <option> Salon de thé
+                            </option>
+                        </select>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>image</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Numero</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="imgg"><img src="assets/mor.png"></div></td>
+                                <td>Adem mehri</td>
+                                <td>mehriadem309@gmail.com</td>
+                                <td>24 480 550</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div></section>

@@ -6,58 +6,41 @@
                 <h1>
                     Détails <span class="sp1">Employé</span> </h1>
                         </div>
-                     
                 
         </div>
             </div>
- <div class="cvv" >
-    
+ <div class="cvv"  >
     <div class="right">
         <div class="head">
             <div class="image">
                 <div class="circle">
-                    <img src="assets/adem.jpg" alt="">
+                    <img [src]="url" alt="image_employee">
                     </div>
 
             </div>
             <div class="nom">
-<p class="titre1">Adem Mehri</p>
-<div class="cv" >
-    <a href="assets/{{this.cv.titlefile}}" >Voir C.V</a>
- </div>
+<p class="titre1">{{emp.nom}}</p>
             </div>
-           
+            <div class="cv" *ngIf="cv" >
+                <a href="assets/{{this.cv.titlefile}}" target="_blank" >Voir CV</a>
+             </div>
         </div>
         <div class="body">
             <div class="exp">
            <div class="contact">
             <p class="titre2">Contact</p>
-            <div class="re">
-           <div class="inputfield">
-            <i class='bx bxs-envelope'></i>
-<p>
- mehriadem309@gmail.com
-</p>
-           </div>
-      
-                        </div>
-           <div class="inputfield">
-            <i class='bx bxs-phone'></i>
-<p>
-24480550
-</p>
-           </div>
-
+        <table>
+<tr><td class="ic"><i class='bx bx-envelope' ></i></td><td><p>{{emp.email}}</p></td></tr>
+<tr><td class="ic"><i class='bx bxs-phone'></i></td><td><p>{{emp.num}}</p></td></tr>
+        </table>
            </div>
            <div class="experience">
             <p class="titre2">
                 Experience
             </p>
             <p>
-         5 ans experience
-                </p>
-             
-      
+         {{emp.exp}}
+            </p>
            </div>
             </div>
 
@@ -65,13 +48,18 @@
         <form [formGroup]="formsignin">
             <div class="ajout">
           
-                <p class="titre2">Ajoutez une offre</p>
-                <textarea name="" id="" cols="30" rows="3" formControlName="offre"></textarea>
+                <p class="titre2 ti">Envoyez un offre</p>
+                <textarea name="" id="" cols="35" rows="5" formControlName="offre"></textarea>
             </div>
             <p class="error">{{result1}}</p>
-            <div class="b">
-               <input class="btn" type="button" value="envoyer" (click)="onsubmit()" >
-                        </div>
+            <div class="btt">
+                <div class="an" (click)="annuler()">
+                  <a>Annuler</a>
+                </div>
+                <div class="b" (click)="onsubmit()" >
+                  <a>Enrigistrer</a>
+                </div>
+              </div>
                 
         </form>
     

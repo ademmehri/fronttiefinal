@@ -119,6 +119,23 @@ span{
     font-size: 18px;
     line-height: 52px;
 }
+.num i{
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+
+}
+.num p{
+    padding: 5px;
+    margin: 0px;
+}
+.num .ic{
+    display: flex;
+    align-items: center;
+}
+.num .com{
+    color: #2772D6;
+}
 /* Media query pour les écrans de taille moyenne (tablette) */
 @media only screen and (max-width: 700px) {
     
@@ -126,80 +143,84 @@ span{
   display: none;
  }
  .p2{
-  display: block;
-  margin-top: 5px;
+    flex-direction: column;
+    
  }
  section{
-  height: 100%;
-  display: block;
+    min-height: 650px;
+    width: 100%;
  }
  .img{
-padding-top: 20px;
-margin: 0px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 30px;
+ }
+ .img img{
+    width: 170px;
+    height: 90px;
+ }
+ .p3{
+    display: none;
+ }
+ .list2{
+    margin-top: 25px;
+ }
+   .rs p{
+text-align: center;
+   }
+   .rs{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: 100%;
+  padding-right: 0px;
+  margin-top: 15px;
+   }
+   .ic{
+    width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 100%;
-padding: 0px;
+   }
+   .z{
+  
+    width: 70%;
+   }
+   .ic i{
+    padding-right: 10px;
+   }
+  }
+  @media screen and (min-width: 701px) and (max-width: 1024px) {
+.p1{
+    display: none;
+}
+.img{
+padding-left: 10px;
+
+width: fit-content;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: 10px;
 }
 .img img{
-  width: 150px;
-  height: 100px;
-}
-.list2{
-  display: none;
+    width: 200px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;  
 }
 .rs{
-  display: none;
+    height: 100%;
 }
-.list1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: fit-content;
-}
-.a{
-  padding-bottom: 0px;
-  padding-right: 10px;
-}
-   
-  }
-  @media screen and (min-width: 701px) and (max-width: 900px) {
- .p1 p{
-  font-size: 15px;
- }
- .input{
-  width: 200px;
- }
- .img{
-  padding-top: 20px;
-
-  padding: 10px;
-  width:fit-content;
-  }
-  .img img{
-    width: 150px;
-    height: 100px;
-  }
   }
   @media screen and (min-width: 901px) and (max-width: 1100px) {
-    .p1 p{
-     font-size: 15px;
-    }
-    .input{
-     width: 400px;
-    }
-    .img{
-     padding-top: 20px;
-    
-     padding: 10px;
-     width:fit-content;
-     }
-     .img img{
-       width: 150px;
-       height: 100px;
-     }
+
      }
   
  

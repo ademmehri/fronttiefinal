@@ -21,7 +21,7 @@ emp!:employee
 cv!:filee
 empr!:employee
 file!:filee
-url!:string
+url='assets/par2.png'
 desc!:String
 formsignin!:FormGroup;
 result1!:string
@@ -44,7 +44,6 @@ result1!:string
   this.userserv.getprofilemployee(this.idemp).subscribe(
     res=>{
   this.emp=res
-
     }
   )
   console.log(this.emp)
@@ -69,7 +68,7 @@ result1!:string
   onsubmit(){
     if(this.formsignin.controls['offre'].errors?.['required']){
       this.result1="s'il vous plait saisire votre offre!!!!";
-      console.log("ok");
+      
     }
     else{
       this.result1="";
@@ -79,9 +78,6 @@ result1!:string
       off.idemp=this.idemp
       off.idempr=this.idempr
       off.descriptionoffre=this.formsignin.controls['offre'].value
-      this.userserv.getprofilemployee(this.idempr).subscribe(
-        res=>{
-      this.empr=res
       this.userserv.addoffre(off).subscribe(
         res=>{
           console.log("okk")
@@ -92,22 +88,17 @@ result1!:string
             showConfirmButton: false,
             timer: 1500
           })
-          this.userserv.sendemailoffre(this.emp.mail,this.empr.nom).subscribe(
-            res=>{
-              console.log(this.empr.id)
-              this.route.navigate(["pagepatron/"+this.empr.id]);
-            }
-          )
+  
          
         }
         
       )
-    
-        }
-      )
 
     }
 
+  }
+  annuler(){
+    this.route.navigate(["profilemployee"]);
   }
 
 }

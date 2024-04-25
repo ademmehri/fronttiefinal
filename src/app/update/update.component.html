@@ -1,72 +1,94 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<section>
-    <div class="image">
-        <img class="im" src="assets/patron.png" alt="">
-    </div>
-    <div class="form">
-      <div class="titre">
-        <h1> </h1>
-      </div>
-
-    
-        <div class="donnee">
-              <form [formGroup]="formsignin"  class="form">
-             <div class="p1">
-                    
-   <div class="head">
-    
-    <div class="pp">
-      <div class="circle">
-      
-        <img [src]="url"  alt="">
-      
+<app-header></app-header>
+<div class="con">
+    <div class="pp1">
+        <div>
+            <div class="titre">
+                <h1>
+                    Détails <span class="sp1">personnel</span> </h1>
+                        </div>
+                        <div class="donee">
+                            <p>Bienvenue sur la page de mise à jour des détails personnels. Votre contribution à notre site est inestimable, et nous souhaitons nous assurer que toutes vos informations sont à jour dans nos dossiers.</p>
+                        </div>
+                
         </div>
-    
-    </div>
-      
-   <div class="upload">
-  
-    <input name="file" id="file" class="inputfile"  type="file" (change)="onselectfile($event)"/>
-    <label for="file" class="file"><i class='bx bx-upload'></i> Modifier votre image</label>
-   </div>
-     </div>
-       
-    <div class="deux">
-
-    </div>
-    <div class="email">
-      <label for="#">Numero</label>
-      <div>
-        <input type="number" placeholder="Numero" formControlName="numero">
-      </div>
-      <p class="m">{{result5}}</p>
-    </div>
-            <div class="email">
-              <label for="#">Email</label>
-              <div>
-                <input type="text" placeholder="Email" formControlName="email">
-              </div>
-              <p class="m">{{result3}}</p>
             </div>
-          
-            <div class="email">
-              <label for="#">Nouveau Mot de passe</label>
-              <div>
-                <input type="password" placeholder="+6 caractere" formControlName="mp">
-              </div>
+   <div class="p">
+    <div class="profil" >
+        <div class="head">
+            <div class="image" (click)="selctimg()">
+                <img [src]="url" alt="image_user"  (mouseenter)="afficherTexte = true" (mouseleave)="afficherTexte = false">
+                <div *ngIf="afficherTexte" class="overlay">
+                  <p>changez vos photo</p>
+                </div>
             </div>
-<p class="m">{{result4}}</p>
-<div class="btn">
-  <button (click)="onsubmit()" >Modifier</button>
-</div>
-             </div>
+           
+            <div class="nom">
+              <i class='bx bx-search fa'></i>
+            </div>
 
+        </div>
+        <div class="nom">
+          <p>{{emp.nom}}</p>
+        </div>
+        <div class="info">
+            <div class="p1">
+                <div class="input">
+                    <label for="#">Email</label>
+                    <p class="g">{{emp.email}}</p>
+                </div>
+            </div>
+            <div class="p2">
+              <form  [formGroup]="formsignin">
+                <h2>Données <span class="s">Personnelles</span></h2>
+                <div class="donnee">
+                    <table>
+                        <tr >
+                            <td class="t">Nom</td>
+                            <td class="g"><input type="text" [style]="bnpm" formControlName="nom"></td>
+                        </tr>
+                        <tr>
+                          <td class="t">Email</td>
+                          <td class="g"><input type="text" formControlName="email" [style]="bemail"></td>
+                      </tr>
+                     
+                        <tr>
+                          <td class="t">Téléphone</td>
+                          <td class="g"><input type="text" formControlName="num" [style]="bnumero"></td>
+                        </tr>
+                        <tr>
+                          <td class="t">Spécialité</td>
+                          <td class="g">
+                            <select formControlName="sp">
+  <option value="Salon de thé">Salon de thé</option>
+<option value="Resturant">Resturant</option>
+<option value="Hotel">Hôtel</option>
+                            </select>
+                          </td>
+                      </tr>
+                        <tr>
+                          <td class="t">Adresse</td>
+                          <td class="g"><input type="text" formControlName="gov" [style]="bgov"></td>
+                      </tr>
+                 
+                
+                    </table>
+                  
+                </div>
               </form>
-          </div>
-         
-    </div>
+            </div>
+            <div class="btt">
+              <div class="an" (click)="annuler()">
+                <a>Annuler</a>
+              </div>
+              <div class="b" (click)="modifier()">
+                <a>Enrigistrer</a>
+              </div>
+            </div>
+        </div>
+        </div>
+   </div>
 
-</section>
+</div>
+<app-footer></app-footer>
 
 

@@ -33,8 +33,10 @@ export class SignuppComponent {
   cin!:string
   num!:string
   result!:employee
-  url=""
+  url="assets/uss.png"
   formsignin!:FormGroup;
+  response!:any
+  token=""
   constructor(private fb:FormBuilder,private userserv:UserService,private route:Router,private router:ActivatedRoute){
     this.formsignin=this.fb.group(
       {
@@ -54,13 +56,13 @@ export class SignuppComponent {
   }
   onsubmit(){
     console.log(this.formsignin);
-    if(this.verifierNom(this.formsignin.controls['nom'].value)){
-      this.bnom="border: green 2px solid;"
-      this.nom=""
-    }
-    else{
+    if(this.formsignin.controls['nom'].errors?.['required']){
       this.bnom="border: red 2px solid;"
       this.nom="champ invalide"
+    }
+    else{
+      this.bnom="border: green 2px solid;"
+      this.nom=""
     }
 
 
@@ -105,7 +107,7 @@ export class SignuppComponent {
    }
    else{
     this.bmp="border: red 2px solid;"
-    this.mp="doit contrnir chiffre,lettre minsicule ,majuscule au moins 8 caractere"
+    this.mp="Le champ doit contenir des chiffres, des lettres minuscules et majuscules, et être d'au moins 8 caractères de long"
    }
     if(this.url==""){
       this.timg="Choisie une image";
@@ -113,41 +115,85 @@ export class SignuppComponent {
     else{
       this.timg=""
     }
-if(this.formsignin.valid && this.url!="" && this.verifierNom(this.formsignin.controls['nom'].value) && this.verifierNumero(this.formsignin.controls['numero'].value) && this.verifierMotDePasse(this.formsignin.controls['mp'].value) ){
-  console.log("ok1");
-  let emp:employee=new employee();
-  emp.nom=this.formsignin.controls['nom'].value.replace(/ /g,'').toLowerCase();
-emp.role="entreprise";
-  emp.mail=this.formsignin.controls['email'].value
-  emp.password=this.formsignin.controls['mp'].value;
-  emp.gouvernerat=this.formsignin.controls['gov'].value;
-  emp.num=this.formsignin.controls['numero'].value
-  emp.specialite=this.formsignin.controls['sp'].value
-  console.log(emp);
-  this.userserv.addemployee(emp).subscribe(
-  (ch)=>{
- this.result=ch
- this.userserv.addfile(this.file,this.result.mail).subscribe(
-  res=>{
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Employeur enrigistrer',
-      showConfirmButton: false,
-      timer: 1500
-    })
-   /* this.userserv.sendemail(this.result.mail).subscribe(
-      res=>{
-        console.log(res)
+if(this.formsignin.valid && this.url!=""  && this.verifierNumero(this.formsignin.controls['numero'].value) && this.verifierMotDePasse(this.formsignin.controls['mp'].value) ){
+
+  let empl:employee=new employee();
+  empl.nom=this.formsignin.controls['nom'].value.replace(/ /g,'').toLowerCase();
+  empl.role="entreprise";
+  empl.email=this.formsignin.controls['email'].value
+  empl.password=this.formsignin.controls['mp'].value;
+  empl.gouvernerat=this.formsignin.controls['gov'].value;
+  empl.num=this.formsignin.controls['numero'].value
+  empl.specialite=this.formsignin.controls['sp'].value
+  empl.pack=3
+  empl.duree=2
+  this.userserv.existmail(empl.email).subscribe(
+    res=>{
+      if(res==false){
+        this.userserv.verificationemail(empl.email).subscribe(
+          res=>{
+        this.response=res
+       this.token= this.response.token
+       console.log(this.token)
+       Swal.fire("Code Veification envoi par email");
+       Swal.fire({
+         title: 'Code de verification envoi par email',
+         input: 'number'
+       }).then(
+         number=>{
+           console.log(number.value)
+               console.log(res)
+               if(this.token==number.value){
+               this.userserv.addentreprise(empl).subscribe(
+                 res=>{
+                  localStorage.setItem('email',empl.email)
+                   this.userserv.addfile(this.file,empl.email).subscribe(
+                    res=>{
+                      console.log("res")
+                    }
+                  )
+      if(empl.specialite==='Hotel'){
+    this.route.navigate(['/login'])
+      }else{
+        this.route.navigate(['/login']) 
       }
-    )*/
-   // this.route.navigate(["packpayment/"+this.result.id]);
-  }
- )
-
-   }
-  )
-
+                 }
+                 
+               )
+               Swal.fire({
+                 position: "top-end",
+                 icon: "success",
+                 title: "Employeur enregistré",
+                 showConfirmButton: false,
+                 timer: 1500
+               });
+    
+               }
+               else{
+                 Swal.fire({
+                   icon: 'error',
+                   title: 'Oops...',
+                   text: 'COde incorecte',
+                
+                 })
+               }
+             
+         
+         }
+       )
+          }
+         ) 
+      }
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Persone existe',
+       
+        })
+      }
+    }
+   )
  
 
 
@@ -165,7 +211,6 @@ emp.role="entreprise";
         this.url=event.target.result;
       }
     }
-  
   }
       onselect(e:any){
       console.log(this.s);
